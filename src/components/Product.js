@@ -5,8 +5,7 @@ class Product extends Component {
     console.log(this.props.product.description)
     return (
       <div>
-        <img src={this.props.product.images[0].src} alt="" height="100px"/>
-        {this.props.product.description}
+        <img src={this.props.product.images[0].src} alt="" height="150px"/>
       </div>
     )
   }
