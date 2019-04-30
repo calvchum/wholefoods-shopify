@@ -1,0 +1,9 @@
+.header {
+  background: red;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    background: green;
+  }
+}
