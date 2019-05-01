@@ -1,13 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Location from './Location';
 
 const Footer = () => {
 	return (
-    <div>
-      <h1>Footer</h1>
-      <Link to="/">
-      	Home
-      </Link>
+    <div className="footer">
+      <div className="footer-wrapper">
+        <div className="location-cards">
+          <Location/>
+          <Location/>
+          <Location/>
+        </div>
+        <div className="email-list">
+          <p>Join our mailing list to receive a once a month new products update</p>
+          <div className="email-input">
+            <input className="first-name" type="text" placeholder="First Name"/>
+            <input className="email" type="text" placeholder="Email"/>
+          </div>
+        </div>
+      </div>
+      <div className="copyright">
+        <span>Copyright Organic Wholefoods 2019</span>
+        <span>Designed and built by <a style={{color: '#f9f9f9'}} href="#">Caterpillar Collective</a></span>
+      </div>
     </div>
 	)
 };
