@@ -1,0 +1,47 @@
+.footer {
+  background: $navy;
+  color: $white;
+  font-size: $body;
+  padding: 20px 20px;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.location-cards {
+  display: flex;
+}
+.email-list {
+  width: 50%;
+  padding: 20px 20px 20px 40px;
+}
+
+.email-list p {
+  width: 300px;
+}
+.email-input {
+  display: flex;
+  width: 300px;
+}
+
+input[type=text] {
+  padding: 12px 10px;
+  color: $navy;
+  border: none;
+}
+input:first-child {
+  margin-right: 1px;
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid $grey;
+    // box-shadow: 0 0 10px #719ECE;
+}
+.copyright {
+  padding: 20px 20px 40px 20px;
+  display: flex;
+  justify-content: space-between;
+}
