@@ -16,10 +16,12 @@
 .email-list {
   width: 50%;
   padding: 20px 20px 20px 40px;
+  align-items: flex-end;
 }
 
 .email-list p {
   width: 300px;
+
 }
 .email-input {
   display: flex;
@@ -38,10 +40,41 @@ input:first-child {
 input:focus {
     outline: none !important;
     border: 1px solid $grey;
-    // box-shadow: 0 0 10px #719ECE;
 }
 .copyright {
   padding: 20px 20px 40px 20px;
   display: flex;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 600px) {
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .email-list {
+    width: 100%;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .location-cards {
+    width: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+  }
+  .location-cards:last-child {
+    align-items: flex-end !important;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
