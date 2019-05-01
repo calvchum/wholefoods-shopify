@@ -45,11 +45,21 @@
 
 // MEDIA BREAK POINTS
 
-@media screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .burger-menu {
   display: inline-block;
-}
+  }
+  .burger-menu img {
+    width: 30px;
+  }
+
   .left-navigation {
     display: none;
+  }
+  .shop {
+    display: none;
+  }
+  .logo img {
+    width: 100px;
   }
 }

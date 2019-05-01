@@ -33,7 +33,7 @@ const Header = () => {
       <Link className='link' to="/">
         <img src={ require('../assets/cart-icon.svg') } alt="Burger menu"/>
       </Link>
-      <Link className='link' to="/products">
+      <Link className='shop link' to="/products">
         <h4>Shop</h4>
       </Link>
     </div>
