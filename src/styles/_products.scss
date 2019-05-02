@@ -11,10 +11,16 @@
 }
 .right-side {
   flex: 0 0 70%;
+
+}
+.products {
+  column-count: 3;
+  column-gap: 5px;
 }
 
-.products {
+.product {
   display: flex;
   flex-flow: row wrap;
+
 }
 
