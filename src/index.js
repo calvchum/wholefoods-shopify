@@ -6,8 +6,8 @@ import Client from 'shopify-buy';
 import css from './styles/style.scss'
 
 const client = Client.buildClient({
-  storefrontAccessToken: 'dd4d4dc146542ba7763305d71d1b3d38',
-  domain: 'graphql.myshopify.com'
+  storefrontAccessToken: 'c0c4eb77234691b728e0355ec50326f4',
+  domain: 'organic-wholefoods-melbourne.myshopify.com'
 });
 
 ReactDOM.render(
