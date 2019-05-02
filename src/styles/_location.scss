@@ -1,17 +1,14 @@
 .location-wrapper {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 200px;
   height: 170;
   color: $white;
-  padding: 20px;
+  padding-right: 10px;
   font-size: $body;
 }
 .location-details {
   margin-top: 0px;
-}
-.open-times {
-  
 }
 .day-times {
   display: flex;
