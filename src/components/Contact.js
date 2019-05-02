@@ -8,7 +8,7 @@ const Contact = () => {
     return (
       <Location
         key={i}
-        location={location}
+        location={location} 
       />
     );
   });
