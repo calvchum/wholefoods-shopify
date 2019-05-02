@@ -1,34 +1,34 @@
-import React from 'react';
-import * as Constants from '../Constants/locationInfo'
+import React, { Component } from 'react';
+class Location extends Component {
+  render() {
+    const data = this.props.location
+    return (
+      <div className="location-wrapper">
+        <div className="location-details">
+          <h3>{data.location}</h3>
+          <p>{data.address}</p>
+        </div>
+        <div className="open-times">
+          <div className="day-times">
+            <span>Mon - Fri</span>
+            <span>{data.hoursMTF}</span>
+          </div>
+          <div className="day-times">
+            <span>Saturday</span>
+            <span>{data.hoursSat}</span>
+          </div>
+          <div className="day-times">
+            <span>Sunday</span>
+            <span>{data.hoursSun}</span>
+          </div>
 
-const Location = () => {
-  console.log(Constants.locationData[0].location)
-	return (
-    <div className="location-wrapper">
-      <div className="location-details">
-        <h3>Flemington</h3>
-        <p>277 Smith Street, Fitzroy, Melbourne</p>
-      </div>
-      <div className="open-times">
-        <div className="day-times">
-          <span>Mon - Fri</span>
-          <span>9am - 7pm</span>
-        </div>
-        <div className="day-times">
-          <span>Saturday</span>
-          <span>10am - 6pm</span>
-        </div>
-        <div className="day-times">
-          <span>Sunday</span>
-          <span>10am - 5pm</span>
-        </div>
-
-        <div className="phone-number">
-          <span>(08) 9768 76 76</span>
+          <div className="phone-number">
+            <span>{data.phone}</span>
+          </div>
         </div>
       </div>
-    </div>
-	)
+    );
+  };
 };
 
 export default Location;
