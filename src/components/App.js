@@ -6,6 +6,7 @@ import Products from './Products';
 import Contact from './Contact';
 import Header from './Header';
 import Footer from './Footer';
+import Cart from './Cart';
 import About from './About';
 import Location from './Location';
 
@@ -78,7 +79,6 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header
-              handleCartClose={this.handleCartClose}
               handleCartOpen={this.handleCartOpen}
             />
             <Route exact path="/" component={Landing}/>
@@ -86,6 +86,11 @@ class App extends Component {
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/offerings" component={Offerings}/>
             <Route exact path="/products" render={renderProducts}/>
+            <Cart
+              checkout={this.state.checkout}
+              isCartOpen={this.state.isCartOpen}
+              handleCartClose={this.handleCartClose}              
+            />
             <Footer/>
           </div>
         </BrowserRouter>
