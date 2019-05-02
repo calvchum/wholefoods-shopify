@@ -1,0 +1,25 @@
+.location-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 170;
+  color: $white;
+  padding: 20px;
+  font-size: $body;
+}
+.location-details {
+  margin-top: 0px;
+}
+.open-times {
+  
+}
+.day-times {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  margin: 0px;
+}
+.phone-number {
+  padding: 10px 0px;
+}
+
