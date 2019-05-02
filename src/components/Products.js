@@ -26,9 +26,11 @@ class Products extends Component {
         </ul>
         </div>
         <div className="right-side">
-            <p>Showing results for 'Search query'</p>
-          <div className="products">  
-            {products}
+          <p>Showing results for 'Search query'</p>
+          <div className="products">
+            <div className="product">  
+              {products}
+            </div>
           </div>
         </div>
       </div>
