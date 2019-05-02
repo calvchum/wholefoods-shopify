@@ -1,6 +1,8 @@
 import React from 'react';
+import * as Constants from '../Constants/locationInfo'
 
 const Location = () => {
+  console.log(Constants.locationData[0].location)
 	return (
     <div className="location-wrapper">
       <div className="location-details">
