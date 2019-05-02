@@ -33,7 +33,7 @@ class Header extends Component {
       <div className="right-navigation">
         <input type="image" 
           src={require('../assets/cart-icon.svg') } 
-          onClick={()=> this.props.handleCartClose} 
+          onClick={this.props.handleCartOpen} 
           alt="Burger Menu"
         />
         <Link className='shop link' to="/products">

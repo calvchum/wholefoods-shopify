@@ -22,6 +22,7 @@ class App extends Component {
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
+    this.handleCartOpen = this.handleCartOpen.bind(this);
   }
 
   componentWillMount() {
@@ -45,6 +46,12 @@ class App extends Component {
   }
 
   handleCartClose() {
+    this.setState({
+      isCartOpen: false,
+    });
+  }
+
+  handleCartOpen() {
     this.setState({
       isCartOpen: true,
     });
@@ -72,6 +79,7 @@ class App extends Component {
           <div>
             <Header
               handleCartClose={this.handleCartClose}
+              handleCartOpen={this.handleCartOpen}
             />
             <Route exact path="/" component={Landing}/>
             <Route exact path="/about" component={About}/>
