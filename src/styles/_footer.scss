@@ -2,7 +2,7 @@
   background: $navy;
   color: $white;
   font-size: $body;
-  padding: 20px 20px;
+  padding: 20px 50px;
 }
 
 .footer-wrapper {
@@ -10,68 +10,69 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .location-cards {
   display: flex;
+  flex: 0 0 70%;
 }
+
 .email-list {
-  width: 50%;
-  padding: 20px 20px 20px 40px;
-  align-items: flex-end;
+  flex: 0 0 30%;
+  align-content: flex-end;
+    & p {
+    width: 240px;
+  }
 }
 
-.email-list p {
-  width: 300px;
-
-}
 .email-input {
   display: flex;
-  width: 300px;
+  width: 240px;
 }
 
-input[type=text] {
+input {
   padding: 12px 10px;
   color: $navy;
   border: none;
-}
-input:first-child {
-  margin-right: 1px;
+    &:first-child {
+    margin-right: 1px;
+    width: 80px;
+  }
+    &:last-child {
+      width: 160px;
+    }
+    &:focus {
+      outline: none !important;
+      border: 1px solid $grey;
+  }
 }
 
-input:focus {
-    outline: none !important;
-    border: 1px solid $grey;
-}
 .copyright {
-  padding: 20px 20px 40px 20px;
+  padding: 20px 0px;
   display: flex;
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
   .footer-wrapper {
     display: flex;
     flex-direction: column-reverse;
-    align-items: flex-start;
   }
   .email-list {
     width: 100%;
-    padding: 0px;
+    padding: 20px;
     justify-content: space-around;
     align-items: center;
   }
   .location-cards {
     width: 100%;
+    justify-content: space-between;
     flex-flow: row wrap;
-    justify-content: space-around;
+    padding: 10px;
+ 
   }
-  .location-cards:last-child {
-    align-items: flex-end !important;
-  }
-
   .footer {
     padding: 10px;
   }
-
   .copyright {
     display: flex;
     flex-direction: column;

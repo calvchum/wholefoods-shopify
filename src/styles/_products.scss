@@ -1,0 +1,20 @@
+.product-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+.filter {
+  flex: 0 0 30%;
+}
+.left-side {
+
+}
+.right-side {
+  flex: 0 0 70%;
+}
+
+.products {
+  display: flex;
+  flex-flow: row wrap;
+}
+

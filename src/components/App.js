@@ -62,7 +62,6 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Header/>
-            <Products products={this.state.products}/>
             <Route exact path="/" component={Landing}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
