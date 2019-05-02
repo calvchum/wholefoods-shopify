@@ -20,7 +20,10 @@ class App extends Component {
     shop: {},
     location: ['Fitzroy', 'Flemington', 'Brunswick']
     };
+
+    this.handleCartClose = this.handleCartClose.bind(this);
   }
+
   componentWillMount() {
     this.props.client.checkout.create().then((res) => {
       this.setState({
@@ -38,6 +41,12 @@ class App extends Component {
       this.setState({
         shop: res,
       });
+    });
+  }
+
+  handleCartClose() {
+    this.setState({
+      isCartOpen: true,
     });
   }
 
@@ -61,7 +70,9 @@ class App extends Component {
       <div className="container">
         <BrowserRouter>
           <div>
-            <Header/>
+            <Header
+              handleCartClose={this.handleCartClose}
+            />
             <Route exact path="/" component={Landing}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
