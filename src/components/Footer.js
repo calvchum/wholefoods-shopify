@@ -4,6 +4,10 @@ import Location from './Location';
 import * as Constants from '../Constants/locationInfo'
 
 class Footer extends Component {
+    componentWillMount() {
+      console.log(window.location.href)
+    };
+
   render() {
     let locations = Constants.locationData.map((location, i) => {
       return (
@@ -17,7 +21,7 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="footer-wrapper">
-          <div className="location-cards">
+          <div className="location-cards" >
             {locations}
           </div>
           <div className="email-list">

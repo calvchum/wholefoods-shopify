@@ -16,7 +16,9 @@ const Contact = () => {
 	return (
     <div>
       <h1>Contact page</h1>
-      {locations}
+      <div className="contact-cards">
+        {locations}
+      </div>
     </div>
 	)
 };
