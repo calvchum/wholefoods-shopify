@@ -30,9 +30,8 @@ const Header = () => {
       </div>
  {/* Cart icon and shop button to navigate to products */}
     <div className="right-navigation">
-      <Link className='link' to="/">
-        <img src={ require('../assets/cart-icon.svg') } alt="Burger menu"/>
-      </Link>
+      <input type="image" src={require('../assets/cart-icon.svg') } onClick={()=> console.log('buttonclicked')} alt=
+      "Burger Menu"/>
       <Link className='shop link' to="/products">
         <h4>Shop</h4>
       </Link>
