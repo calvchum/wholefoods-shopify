@@ -13,15 +13,16 @@
 
 .location-cards {
   display: flex;
-  flex: 0 0 70%;
+  flex: 1 1 70%;
   color: $white !important;
 }
 
 .email-list {
-  flex: 0 0 30%;
+  flex: 1 1 30%;
   align-content: flex-end;
     & p {
-    width: 240px;
+    width: 100%;
+    max-width: 300px;
   }
 }
 
@@ -60,9 +61,8 @@ input {
     flex-direction: column-reverse;
   }
   .email-list {
-    width: 100%;
-    padding: 20px;
-    justify-contet: space-between;
+    width: calc(100%);
+    padding: 0 10px;
     align-items: center;
     display: flex;
   }
@@ -79,6 +79,16 @@ input {
   .copyright {
     display: flex;
     flex-direction: column;
+    & span:first-child {
+      padding-bottom: 10px;
+    }
   }
 }
 
+@media only screen and (max-width: 500px) {
+  .email-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
