@@ -19,6 +19,10 @@ $header: 25px;
 @import '_contact.scss';
 @import '_about.scss';
 
+.header {
+  font-size: $header;
+
+}
 .subheader {
   font-size: $sub-header;
 }

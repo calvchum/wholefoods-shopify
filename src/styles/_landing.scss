@@ -1,18 +1,44 @@
-.browse-button {
-  padding: 20px;
-  border: 1px $navy solid;
-  background: white;
-  border-radius: 2px;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
 .landing-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  & p {
-  text-align: center;
+}
+.landing-bkg {
+  background-size: cover;
+  background: linear-gradient(-225deg, rgba(1, 1, 1, 0.4) 40%, rgba(1, 1, 1, 0.4) 40%), url(https://res.cloudinary.com/davoctnex/image/upload/v1556608251/Organic%20Wholefoods%20Sample%20Images/Shop-front-imagery.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 80vh;
+  width: 100vw;
+}
+
+.landing-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  
+  & .body-text {
+    line-height: 29px;
+    text-align: justify;
+    width: 600px;
   }
 }
 
+.browse-button {
+  padding: 20px;
+  font-size: $body;
+  background: white;
+  border-radius: 2px;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 342px;
+  height: 66px;
+}
+
+.landing-locations {
+  display: flex;
+}
