@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './Landing';
 import Offerings from './Offerings';
-import Products from './Products';
+import ProductGrid from './ProductGrid';
 import Contact from './Contact';
 import Header from './Header';
 import Footer from './Footer';
@@ -59,9 +59,9 @@ class App extends Component {
 
   render() {
 
-  const renderProducts = (props) => {
+  const renderProductGrid = (props) => {
     return (
-      <Products
+      <ProductGrid
         products={this.state.products}
         data={
           {
@@ -84,7 +84,7 @@ class App extends Component {
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/offerings" component={Offerings}/>
-            <Route exact path="/products" render={renderProducts}/>
+            <Route exact path="/products" render={renderProductGrid}/>
             <Cart
               checkout={this.state.checkout}
               isCartOpen={this.state.isCartOpen}
