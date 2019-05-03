@@ -1,8 +1,17 @@
 import React, { Component } from 'react';
+import * as qs from 'query-string';
 
-class Single extends React {
+
+// pass down products
+// findIndex with productId against this.props.products.id
+
+class Single extends Component {
   render(){
-    <p>Single view of a product</p>
+    const productId = this.props.location.pathname
+    console.log(productId)
+  	return(
+      <p>Single render of Product</p>
+    )
   }
 }
 

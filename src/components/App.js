@@ -5,6 +5,7 @@ import Offerings from './Offerings';
 import ProductGrid from './ProductGrid';
 import Contact from './Contact';
 import Header from './Header';
+import Single from './Single';
 import Footer from './Footer';
 import Cart from './Cart';
 import About from './About';
@@ -81,10 +82,11 @@ class App extends Component {
               handleCartOpen={this.handleCartOpen}
             />
             <Route exact path="/" component={Landing}/>
+            <Route path="/products" render={renderProductGrid}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/offerings" component={Offerings}/>
-            <Route exact path="/products" render={renderProductGrid}/>
+            <Route exact path="/:productId" component={Single}/>
             <Cart
               checkout={this.state.checkout}
               isCartOpen={this.state.isCartOpen}
