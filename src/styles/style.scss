@@ -17,7 +17,15 @@ $header: 25px;
 @import '_products.scss';
 @import '_product.scss';
 @import '_contact.scss';
+@import '_about.scss';
 
+.subheader {
+  font-size: $sub-header;
+}
+
+.body-text {
+  font-size: $body;
+}
 
 body {
   margin: 0px;
