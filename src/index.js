@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 import Client from 'shopify-buy';
-import css from './styles/style.scss'
+import './styles/style.scss'
 
 const client = Client.buildClient({
   storefrontAccessToken: 'c0c4eb77234691b728e0355ec50326f4',

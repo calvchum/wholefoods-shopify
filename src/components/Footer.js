@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Location from './Location';
 import * as Constants from '../Constants/locationInfo'
 
@@ -34,7 +33,7 @@ class Footer extends Component {
         </div>
         <div className="copyright">
           <span>Copyright Organic Wholefoods 2019</span>
-          <span>Designed and built by <a style={{color: '#f9f9f9'}} href="#">Caterpillar Collective</a></span>
+          <span>Designed and built by <a style={{color: '#f9f9f9'}} href="/">Caterpillar Collective</a></span>
         </div>
       </div>
     )  
