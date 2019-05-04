@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Product from './Product';
+import SingleProduct from './SingleProduct'
 
 
 // pass down products
@@ -7,13 +7,27 @@ import Product from './Product';
 
 class Single extends Component {
   render(){
-    const productId = this.props.location.pathname.replace('/view/', '')
-    const i = this.props.products.findIndex((product) => product.id === productId);
-    const product = this.props.products[i];
     
+    const productId = this.props.location.pathname.replace('/view/', '')
+    
+    let i = this.props.products.findIndex((product) => product.id === productId);
+    let product = this.props.products[i];
+
+    if (product === undefined) {
+      console.log('Loading products') 
+    } else {
+      return (
+        <div>
+          <SingleProduct
+            product={product}
+          />
+        </div>
+      )
+    }
+
   	return(
       <div>
-        <p>Single page of</p>
+
       </div>
     )
   }

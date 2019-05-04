@@ -3,8 +3,21 @@ import Product from './Product'
 
 class ProductGrid extends Component {
   render() {
+    // console.log(Object.keys(this.props.products[0]))
+    let product = this.props.products[0]
+    if (product === undefined) {
+      console.log('not found')
+    } else {
+      console.log(product.id)
+    }
+
+    
+    // this.props.products.map((product) => {
+    //   console.log(product.title)
+    // })
     let products = this.props.products.map((product) => {
       return (
+
         <Product
           addVariantToCart={this.props.addVariantToCart}
           client={this.props.client}

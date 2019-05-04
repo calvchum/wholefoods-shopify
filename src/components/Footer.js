@@ -4,7 +4,7 @@ import * as Constants from '../Constants/locationInfo'
 
 class Footer extends Component {
     componentWillMount() {
-      console.log(window.location.href)
+      
     };
 
   render() {
