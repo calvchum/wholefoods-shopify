@@ -10,6 +10,7 @@ class ProductGrid extends Component {
           client={this.props.client}
           key={product.id.toString()}
           product={product}
+          products={this.props.products}
         />
       );
     });

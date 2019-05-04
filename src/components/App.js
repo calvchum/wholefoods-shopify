@@ -74,6 +74,15 @@ class App extends Component {
       />
     )
   }
+
+  const renderSingle = (props) => {
+    return (
+      <Single
+        products={this.state.products}
+        {...props}
+      />
+    )
+  }
     return (
       <div className="container">
         <BrowserRouter>
@@ -86,7 +95,7 @@ class App extends Component {
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/offerings" component={Offerings}/>
-            <Route exact path="/:productId" component={Single}/>
+            <Route exact path="/view/:productId" render={renderSingle}/>
             <Cart
               checkout={this.state.checkout}
               isCartOpen={this.state.isCartOpen}

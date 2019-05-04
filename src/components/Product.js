@@ -6,7 +6,7 @@ class Product extends Component {
     const { id } = this.props.product
     return (
       <div className="product-display-image">
-	      <Link to={`${id}`}>
+	      <Link to={`/view/${id}`}>
 	        <img src={this.props.product.images[0].src} alt=""/>
 	        <button className="add-to-cart">Add To Cart</button>
 	      </Link>

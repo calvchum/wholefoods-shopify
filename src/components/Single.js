@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as qs from 'query-string';
+import Product from './Product';
 
 
 // pass down products
@@ -7,10 +7,14 @@ import * as qs from 'query-string';
 
 class Single extends Component {
   render(){
-    const productId = this.props.location.pathname
-    console.log(productId)
+    const productId = this.props.location.pathname.replace('/view/', '')
+    const i = this.props.products.findIndex((product) => product.id === productId);
+    const product = this.props.products[i];
+    
   	return(
-      <p>Single render of Product</p>
+      <div>
+        <p>Single page of</p>
+      </div>
     )
   }
 }
