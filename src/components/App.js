@@ -19,10 +19,10 @@ class App extends Component {
     checkout: { lineItems: [] },
     products: [],
     shop: {},
-    location: ['Fitzroy', 'Flemington', 'Brunswick']
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
+    this.addProductToCart = this.addProductToCart.bind(this);
     this.handleCartOpen = this.handleCartOpen.bind(this);
   }
 
@@ -62,7 +62,6 @@ class App extends Component {
     this.setState({
       isCartOpen: true,
     })
-    console.log(this.props.client.checkout)
   }
 
   render() {
@@ -71,12 +70,7 @@ class App extends Component {
     return (
       <ProductGrid
         products={this.state.products}
-        data={
-          {
-          name: 'calvin',
-          dob: '04/07/1991'
-          }
-        }
+        addProductToCart={this.addProductToCart}
         {...props}
       />
     )

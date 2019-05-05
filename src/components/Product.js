@@ -8,8 +8,8 @@ class Product extends Component {
       <div className="product-display-image">
 	      <Link to={`/view/${id}`}>
 	        <img src={this.props.product.images[0].src} alt=""/>
-	        <button className="add-to-cart">Add To Cart</button>
 	      </Link>
+        <button onClick={ () => console.log(this.props.product.variants)} className="add-to-cart">Add To Cart</button>
       </div>
     )
   }
