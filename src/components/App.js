@@ -19,7 +19,6 @@ class App extends Component {
     checkout: { lineItems: [] },
     products: [],
     shop: {},
-    location: ['Fitzroy', 'Flemington', 'Brunswick']
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
