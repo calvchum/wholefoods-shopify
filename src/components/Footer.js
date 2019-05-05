@@ -27,10 +27,14 @@ class Footer extends Component {
             </div>
           </div>
         </div>
-          <div className="copyright">
-            <span>Copyright Organic Wholefoods 2019</span>
-            <span>Designed and built by <a style={{color: '#f9f9f9'}} href="/">Caterpillar Collective</a></span>
-          </div>
+        <div className="copyright">
+        <div className="copyright-text">
+          <span>Copyright Organic Wholefoods 2019</span>
+        </div>
+        <div className="designed-by">
+          <span>Designed and built by <a style={{color: '#f9f9f9'}} href="/">Caterpillar Collective</a></span>
+        </div>
+        </div>
       </div>
     )  
   }
