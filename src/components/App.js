@@ -62,7 +62,7 @@ class App extends Component {
     this.setState({
       idCartOpen: true,
     });
-    console.log(this.props.client.checkout)
+    console.log(this.state.checkout.id)
   }
 
   render() {
