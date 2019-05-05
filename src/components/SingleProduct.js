@@ -41,7 +41,7 @@ class SingleProduct extends Component {
     let variant = this.state.selectedVariant || this.props.product.variants[0]
     let variantQuantity = this.state.selectedVariantQuantity || 1
     // the Add To Cart button is coded here 
-    const addToCartButton = <button onClick={ () => console.log(variant)} className="add-to-cart">Add To Cart</button>
+    const addToCartButton = <button onClick={ () => console.log(variantQuantity)} >Add To Cart</button>
     // the quantity field is coded here
     const quantityField = <label> 
       Quantity
