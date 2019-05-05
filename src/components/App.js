@@ -80,6 +80,7 @@ class App extends Component {
   const renderSingle = (props) => {
     return (
       <Single
+        client={this.props.client}
         products={this.state.products}
         {...props}
       />

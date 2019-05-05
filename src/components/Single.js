@@ -20,6 +20,7 @@ class Single extends Component {
         <div>
           <SingleProduct
             product={product}
+            {...this.props}
           />
         </div>
       )
