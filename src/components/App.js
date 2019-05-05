@@ -58,6 +58,13 @@ class App extends Component {
     });
   }
 
+  addProductToCart() {
+    this.setState({
+      isCartOpen: true,
+    })
+    console.log(this.props.client.checkout)
+  }
+
   render() {
 
   const renderProductGrid = (props) => {
