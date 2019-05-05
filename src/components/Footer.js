@@ -3,10 +3,6 @@ import Location from './Location';
 import * as Constants from '../Constants/locationInfo'
 
 class Footer extends Component {
-    componentWillMount() {
-      console.log(window.location.href)
-    };
-
   render() {
     let locations = Constants.locationData.map((location, i) => {
       return (
@@ -31,10 +27,10 @@ class Footer extends Component {
             </div>
           </div>
         </div>
-        <div className="copyright">
-          <span>Copyright Organic Wholefoods 2019</span>
-          <span>Designed and built by <a style={{color: '#f9f9f9'}} href="/">Caterpillar Collective</a></span>
-        </div>
+          <div className="copyright">
+            <span>Copyright Organic Wholefoods 2019</span>
+            <span>Designed and built by <a style={{color: '#f9f9f9'}} href="/">Caterpillar Collective</a></span>
+          </div>
       </div>
     )  
   }

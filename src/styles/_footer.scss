@@ -3,12 +3,16 @@
   color: $white;
   font-size: $body;
   padding: 20px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1000px;
 }
 
 .location-cards {
@@ -52,7 +56,9 @@ input {
 .copyright {
   padding: 20px 0px;
   display: flex;
-  justify-content: space-between;
+  align-items: space-between;
+  justify-content: space-between !important;
+  max-width: 1000px;
 }
 
 @media only screen and (max-width: 900px) {
