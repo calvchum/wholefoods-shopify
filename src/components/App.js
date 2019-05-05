@@ -23,6 +23,7 @@ class App extends Component {
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
+    this.addProductToCart = this.addProductToCart.bind(this);
     this.handleCartOpen = this.handleCartOpen.bind(this);
   }
 
@@ -58,18 +59,20 @@ class App extends Component {
     });
   }
 
+  addProductToCart() {
+    this.setState({
+      idCartOpen: true,
+    });
+    console.log(this.props.client.checkout)
+  }
+
   render() {
 
   const renderProductGrid = (props) => {
     return (
       <ProductGrid
         products={this.state.products}
-        data={
-          {
-          name: 'calvin',
-          dob: '04/07/1991'
-          }
-        }
+        addProductToCart={this.addProductToCart}
         {...props}
       />
     )
