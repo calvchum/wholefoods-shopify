@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Landing from './Landing';
 import Offerings from './Offerings';
-import Products from './Products';
+import ProductGrid from './ProductGrid';
 import Contact from './Contact';
 import Header from './Header';
+import Single from './Single';
 import Footer from './Footer';
 import Cart from './Cart';
 import About from './About';
@@ -59,9 +60,9 @@ class App extends Component {
 
   render() {
 
-  const renderProducts = (props) => {
+  const renderProductGrid = (props) => {
     return (
-      <Products
+      <ProductGrid
         products={this.state.products}
         data={
           {
@@ -69,6 +70,15 @@ class App extends Component {
           dob: '04/07/1991'
           }
         }
+        {...props}
+      />
+    )
+  }
+
+  const renderSingle = (props) => {
+    return (
+      <Single
+        products={this.state.products}
         {...props}
       />
     )
@@ -81,10 +91,11 @@ class App extends Component {
               handleCartOpen={this.handleCartOpen}
             />
             <Route exact path="/" component={Landing}/>
+            <Route path="/products" render={renderProductGrid}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/contact" component={Contact}/>
             <Route exact path="/offerings" component={Offerings}/>
-            <Route exact path="/products" render={renderProducts}/>
+            <Route exact path="/view/:productId" render={renderSingle}/>
             <Cart
               checkout={this.state.checkout}
               isCartOpen={this.state.isCartOpen}

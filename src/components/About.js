@@ -14,7 +14,7 @@ const About = () => {
         <p className="body-text">We stock a heap of great products, all trying to do better by our planet and we have a wide range of dillax</p> 
       </div>
       <div className="about-right">
-        <img className="about-image" src={ require('../assets/jeri-about.png') } />
+        <img className="about-image" src={ require('../assets/jeri-about.png') } alt="about" />
       </div>
     </div>
 	)
