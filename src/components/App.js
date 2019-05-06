@@ -24,6 +24,7 @@ class App extends Component {
     this.handleCartClose = this.handleCartClose.bind(this);
     this.addProductToCart = this.addProductToCart.bind(this);
     this.handleCartOpen = this.handleCartOpen.bind(this);
+    this.addVariantToCart = this.addVariantToCart.bind(this);
   }
 
   componentWillMount() {
@@ -60,9 +61,26 @@ class App extends Component {
 
   addProductToCart() {
     this.setState({
-      idCartOpen: true,
+      isCartOpen: true,
     });
     console.log(this.state.checkout.id)
+  }
+
+  addVariantToCart(variantId, quantity) {
+    this.setState({
+      isCartOpen: true,
+    });
+
+    const lineItemsToAdd = [{variantId, quantity: parseInt(quantity, 10)}]
+    const checkoutId = this.state.checkout.id
+
+    return this.props.client.checkout.addLineItems(checkoutId, lineItemsToAdd).then(res => {
+      this.setState({
+        checkout: res,
+      });
+      console.log(this.props.client.checkout)
+    });
+
   }
 
   render() {
@@ -81,7 +99,9 @@ class App extends Component {
     return (
       <Single
         client={this.props.client}
+        isCartOpen={this.state.isCartOpen}
         products={this.state.products}
+        addVariantToCart={this.addVariantToCart}
         {...props}
       />
     )
