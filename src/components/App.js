@@ -22,7 +22,6 @@ class App extends Component {
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
-    this.addProductToCart = this.addProductToCart.bind(this);
     this.handleCartOpen = this.handleCartOpen.bind(this);
     this.addVariantToCart = this.addVariantToCart.bind(this);
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
@@ -82,8 +81,7 @@ class App extends Component {
     });
   }
 
-  addProductToCart() {
-  }
+  
 
   addVariantToCart(variantId, quantity) {
     this.setState({
@@ -107,7 +105,6 @@ class App extends Component {
     return (
       <ProductGrid
         products={this.state.products}
-        addProductToCart={this.addProductToCart}
         {...props}
       />
     )
