@@ -83,10 +83,6 @@ class App extends Component {
   }
 
   addProductToCart() {
-    this.setState({
-      isCartOpen: true,
-    });
-    console.log(this.state.checkout.id)
   }
 
   addVariantToCart(variantId, quantity) {

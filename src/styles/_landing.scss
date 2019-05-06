@@ -12,20 +12,20 @@
   background-size: cover;
   height: 80vh;
   width: 100vw;
-}
-
-.landing-copy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: $white;
-  & .body-text {
-    line-height: 29px;
-    text-align: justify;
-    width: 600px;
+  & .landing-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    & .body-text {
+      line-height: 29px;
+      text-align: justify;
+      width: 600px;
+    }
   }
 }
+
 
 .browse-button {
   padding: 20px;
@@ -41,7 +41,7 @@
 .landing-locations {
   display: flex;
   padding: 0 30px;
-  flex-flow: row wrap;
+  // flex-flow: row wrap;
   align-items: center;
 }
 
