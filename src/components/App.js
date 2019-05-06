@@ -24,6 +24,9 @@ class App extends Component {
     this.handleCartClose = this.handleCartClose.bind(this);
     this.addProductToCart = this.addProductToCart.bind(this);
     this.handleCartOpen = this.handleCartOpen.bind(this);
+    this.addVariantToCart = this.addVariantToCart.bind(this);
+    this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
+    this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
   }
 
   componentWillMount() {
@@ -52,6 +55,27 @@ class App extends Component {
     });
   }
 
+  updateQuantityInCart(lineItemId, quantity) {
+    const checkoutId = this.state.checkout.id
+    const lineItemsToUpdate = [{id: lineItemId, quantity: parseInt(quantity, 10)}]
+
+    return this.props.client.checkout.updateLineItems(checkoutId, lineItemsToUpdate).then(res => {
+      this.setState({
+        checkout: res,
+      });
+    });
+  }
+
+  removeLineItemInCart(lineItemId) {
+    const checkoutId = this.state.checkout.id
+
+    return this.props.client.checkout.removeLineItems(checkoutId, [lineItemId]).then(res => {
+      this.setState({
+        checkout: res,
+      });
+    });
+  }
+
   handleCartOpen() {
     this.setState({
       isCartOpen: true,
@@ -59,9 +83,22 @@ class App extends Component {
   }
 
   addProductToCart() {
+  }
+
+  addVariantToCart(variantId, quantity) {
     this.setState({
       isCartOpen: true,
-    })
+    });
+
+    const lineItemsToAdd = [{variantId, quantity: parseInt(quantity, 10)}]
+    const checkoutId = this.state.checkout.id
+
+    return this.props.client.checkout.addLineItems(checkoutId, lineItemsToAdd).then(res => {
+      this.setState({
+        checkout: res,
+      });
+    });
+
   }
 
   render() {
@@ -79,7 +116,10 @@ class App extends Component {
   const renderSingle = (props) => {
     return (
       <Single
+        client={this.props.client}
+        isCartOpen={this.state.isCartOpen}
         products={this.state.products}
+        addVariantToCart={this.addVariantToCart}
         {...props}
       />
     )
@@ -98,9 +138,12 @@ class App extends Component {
             <Route exact path="/offerings" component={Offerings}/>
             <Route exact path="/view/:productId" render={renderSingle}/>
             <Cart
+              updateQuantityInCart={this.updateQuantityInCart}
+              removeLineItemInCart={this.removeLineItemInCart}
               checkout={this.state.checkout}
               isCartOpen={this.state.isCartOpen}
-              handleCartClose={this.handleCartClose}              
+              handleCartClose={this.handleCartClose}
+
             />
             <Footer/>
           </div>

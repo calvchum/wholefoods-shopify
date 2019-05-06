@@ -7,6 +7,7 @@ class VariantSelector extends Component {
       <select
         name={name}
         key={name}
+        onChange={this.props.handleOptionChange}
       >
         {values.map((value) => {
           return (

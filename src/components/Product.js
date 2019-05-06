@@ -9,7 +9,6 @@ class Product extends Component {
 	      <Link to={`/view/${id}`}>
 	        <img src={this.props.product.images[0].src} alt=""/>
 	      </Link>
-        <button onClick={ () => console.log(this.props.product.variants)} className="add-to-cart">Add To Cart</button>
       </div>
     )
   }
