@@ -78,7 +78,6 @@ class App extends Component {
       this.setState({
         checkout: res,
       });
-      console.log(this.props.client.checkout)
     });
 
   }
