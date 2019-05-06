@@ -25,6 +25,8 @@ class App extends Component {
     this.addProductToCart = this.addProductToCart.bind(this);
     this.handleCartOpen = this.handleCartOpen.bind(this);
     this.addVariantToCart = this.addVariantToCart.bind(this);
+    this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
+    this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
   }
 
   componentWillMount() {
@@ -50,6 +52,27 @@ class App extends Component {
   handleCartClose() {
     this.setState({
       isCartOpen: false,
+    });
+  }
+
+  updateQuantityInCart(lineItemId, quantity) {
+    const checkoutId = this.state.checkout.id
+    const lineItemsToUpdate = [{id: lineItemId, quantity: parseInt(quantity, 10)}]
+
+    return this.props.client.checkout.updateLineItems(checkoutId, lineItemsToUpdate).then(res => {
+      this.setState({
+        checkout: res,
+      });
+    });
+  }
+
+  removeLineItemInCart(lineItemId) {
+    const checkoutId = this.state.checkout.id
+
+    return this.props.client.checkout.removeLineItems(checkoutId, [lineItemId]).then(res => {
+      this.setState({
+        checkout: res,
+      });
     });
   }
 
@@ -119,9 +142,12 @@ class App extends Component {
             <Route exact path="/offerings" component={Offerings}/>
             <Route exact path="/view/:productId" render={renderSingle}/>
             <Cart
+              updateQuantityInCart={this.updateQuantityInCart}
+              removeLineItemInCart={this.removeLineItemInCart}
               checkout={this.state.checkout}
               isCartOpen={this.state.isCartOpen}
-              handleCartClose={this.handleCartClose}              
+              handleCartClose={this.handleCartClose}
+
             />
             <Footer/>
           </div>

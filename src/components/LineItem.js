@@ -19,11 +19,15 @@ class LineItem extends Component {
   }
 
   render() {
-    console.log(this.props.line_item)
+    console.log(this.props.line_item.quantity)
+    // i added some temporary in-line styling just so the images wouldn't block out the whole cart
+    const imgStyle = {
+      height: '50px',
+    }
     return (
       <li>
         <div>
-          {this.props.line_item.variant.image ? <img src={this.props.line_item.variant.image.src} alt={`${this.props.line_item.title} product shot`}/> : null}
+          {this.props.line_item.variant.image ? <img src={this.props.line_item.variant.image.src} alt={`${this.props.line_item.title} product shot`} style={imgStyle}/> : null}
         </div>
         <div>
           <div>
