@@ -9,6 +9,7 @@ import Single from './Single';
 import Footer from './Footer';
 import Cart from './Cart';
 import About from './About';
+import Searchbar from './Searchbar';
 
 class App extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class App extends Component {
     checkout: { lineItems: [] },
     products: [],
     shop: {},
+    search: ''
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
@@ -26,6 +28,7 @@ class App extends Component {
     this.addVariantToCart = this.addVariantToCart.bind(this);
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
     this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
+    this.updateSearch = this.updateSearch.bind(this);
   }
 
   componentWillMount() {
@@ -52,6 +55,11 @@ class App extends Component {
     this.setState({
       isCartOpen: false,
     });
+  }
+
+  updateSearch(input) {
+    const search = {...this.state.search}
+    this.setState({ search: input })
   }
 
   updateQuantityInCart(lineItemId, quantity) {
@@ -121,12 +129,18 @@ class App extends Component {
       />
     )
   }
+
     return (
       <div className="container">
         <BrowserRouter>
           <div>
             <Header
               handleCartOpen={this.handleCartOpen}
+            />
+            <Searchbar
+              products={this.state.products}
+              updateSearch={this.updateSearch}
+              search={this.state.search}
             />
             <Route exact path="/" component={Landing}/>
             <Route path="/products" render={renderProductGrid}/>
