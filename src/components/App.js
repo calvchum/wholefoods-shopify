@@ -20,7 +20,8 @@ class App extends Component {
     checkout: { lineItems: [] },
     products: [],
     shop: {},
-    search: ''
+    search: '',
+    searchResults: {}
     };
 
     this.handleCartClose = this.handleCartClose.bind(this);
@@ -29,6 +30,7 @@ class App extends Component {
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
     this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
     this.updateSearch = this.updateSearch.bind(this);
+    this.updateSearchResults = this.updateSearchResults.bind(this);
   }
 
   componentWillMount() {
@@ -57,9 +59,18 @@ class App extends Component {
     });
   }
 
+  updateSearchResults() {
+    const filteredItems = this.state.products.filter(
+      (product) => {
+        return product.title.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+      }
+    );
+    this.setState({searchResults: filteredItems})    
+  }
+
   updateSearch(input) {
-    const search = {...this.state.search}
     this.setState({ search: input })
+    this.updateSearchResults()
   }
 
   updateQuantityInCart(lineItemId, quantity) {

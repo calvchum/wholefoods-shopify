@@ -4,6 +4,11 @@ class Searchbar extends Component {
 	
   handleChange(e) {
     const search = e.target.value
+    const filteredItems = this.props.products.filter(
+      (product) => {
+        return product.title.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
+      }
+    );
     this.props.updateSearch(search);
   }
 
@@ -13,7 +18,7 @@ class Searchbar extends Component {
         <input
           placeholder="Search..."
           defaultValue=''
-          onChange={(e) => {this.handleChange(e)}}
+          onKeyUp={(e) => {this.handleChange(e)}}
         >
         </input>
       </div>
