@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Constants from '../Constants/locationInfo';
 import Location from './Location'
+import LocationImage from './LocationImage'
 
 const Contact = () => {
 
@@ -19,6 +20,7 @@ const Contact = () => {
       <div className="contact-cards">
         {locations}
       </div>
+            <LocationImage />
     </div>
 	)
 };
