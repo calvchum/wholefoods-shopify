@@ -16,6 +16,7 @@ class Searchbar extends Component {
 		return (
       <div>
         <input
+          className="search-bar"
           placeholder="Search..."
           defaultValue=''
           onKeyUp={(e) => {this.handleChange(e)}}

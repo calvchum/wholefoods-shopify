@@ -31,27 +31,28 @@
 }
 
 .email-input {
-  display: flex;
-  width: 240px;
+    display: flex;
+    width: 240px;
+    & input {
+    padding: 12px 10px;
+    color: $navy;
+    border: none;
+    border-radius: 2px;
+      &:first-child {
+      margin-right: 1px;
+      width: 80px;
+    }
+      &:last-child {
+        width: 160px;
+      }
+      &:focus {
+        outline: none !important;
+        border: 1px solid $grey;
+    }
+  }
+
 }
 
-input {
-  padding: 12px 10px;
-  color: $navy;
-  border: none;
-  border-radius: 2px;
-    &:first-child {
-    margin-right: 1px;
-    width: 80px;
-  }
-    &:last-child {
-      width: 160px;
-    }
-    &:focus {
-      outline: none !important;
-      border: 1px solid $grey;
-  }
-}
 
 .copyright {
   padding: 20px 0px;

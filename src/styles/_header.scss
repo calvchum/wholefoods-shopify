@@ -8,51 +8,53 @@
 }
 .left-navigation {
   display: flex;
+  padding-left: 20px;
 }
+
 .link {
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: $body;
-  line-height: 26px;/* identical to box height */
+  line-height: 26px;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   text-decoration: none;
-  padding-left: 20px;
   color: $navy;
+  padding: 8px;
 }
-
 
 .link:hover {
   color: $grey;
 }
 .right-navigation {
   display: flex;
-
+  justify-content: center;
+  align-items: center;
   &:last-child {
     padding-right: 20px;
   }
 }
-.burger-menu {
-  display: none;
+.header-icons img, input {
+  height: 25px;
+  width: 25px; 
+  display: inline-block;
 }
+
+  .hamburger-menu {
+    display: none;
+  }  
+
 
 // MEDIA BREAK POINTS
 
 @media only screen and (max-width: 900px) {
-  .burger-menu {
+  .hamburger-menu {
     display: inline-block;
-    & img {
-      width: 30px;
-    }
   }
-
-  .left-navigation {
-    display: none;
-  }
-  .shop {
+  .left-navigation .link-text {
     display: none;
   }
   .logo img {
