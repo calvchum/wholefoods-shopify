@@ -32,6 +32,14 @@ $header: 25px;
   font-size: $body;
   font-weight: 400;
 }
+.search-bar {
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: none;
+  &:focus {
+    outline: $navy;
+  }
+}
 
 body {
   margin: 0px;

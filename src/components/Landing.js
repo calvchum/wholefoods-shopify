@@ -31,7 +31,9 @@ class Landing extends Component {
       </div>
         </div>
         <div className="landing-locations">
-          {locations}
+          <div className="landing-locations-wrapper">
+            {locations}
+          </div>
         </div>
         <div className="landing-instagram">
         </div>

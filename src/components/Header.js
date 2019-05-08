@@ -5,21 +5,21 @@ class Header extends Component {
   render() {
       return (
       <div className="header-wrapper">
-    {/* Burger menu for mobile devices only */}
-        <div className="burger-menu link">
-          <Link to="/">
-            <img src={ require('../assets/burger-menu.svg') } alt="Burger menu"/>
-          </Link>
   {/* Navigation buttons for desktop devices only */}
-        </div>
         <div className="left-navigation">
-          <Link className='link' to="/about">
+          <div className="header-icons hamburger-menu link">
+    {/* Burger menu for mobile devices only */}
+            <Link to="/">
+              <img src={ require('../assets/burger-menu.svg') } alt="Burger menu"/>
+            </Link>
+          </div>
+          <Link className='link link-text' to="/about">
             <h4>About</h4>
           </Link>      
-          <Link className='link' to="/contact">
+          <Link className='link link-text' to="/contact">
             <h4>Contact</h4>
           </Link>
-          <Link className='link' to="/offerings">
+          <Link className='link link-text' to="/offerings">
             <h4>Offerings</h4>
           </Link>
         </div>
@@ -31,13 +31,13 @@ class Header extends Component {
         </div>
    {/* Cart icon and shop button to navigate to products */}
       <div className="right-navigation">
-        <input type="image" 
+        <input className="header-icons" type="image" 
           src={require('../assets/cart-icon.svg') } 
           onClick={this.props.handleCartOpen} 
-          alt="Burger Menu"
+          alt="Cart icon"
         />
-        <Link className='shop link' to="/products">
-          <h4>Shop</h4>
+        <Link className="header-icons search-icon link" to="/">
+          <img src={ require('../assets/search-icon.svg') } alt="search icon"/>
         </Link>
       </div>
     </div>
