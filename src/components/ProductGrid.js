@@ -3,9 +3,8 @@ import Product from './Product'
 
 class ProductGrid extends Component {
   render() {
-    let products = this.props.products.map((product) => {
+    let allProducts = this.props.products.map((product) => {
       return (
-
         <Product
           client={this.props.client}
           key={product.id.toString()}
@@ -14,6 +13,12 @@ class ProductGrid extends Component {
         />
       );
     });
+
+    if (this.props.search !== '') {
+      this.props.searchResults.map((product) => {
+        console.log(product.title)
+      })
+    }
 
     return (
       <div className="product-wrapper">
@@ -29,8 +34,8 @@ class ProductGrid extends Component {
         <div className="right-side">
           <p>Showing results for 'Search query'</p>
           <div className="products">
-            <div className="product">  
-              {products}
+            <div className="product">   
+              {allProducts}
             </div>
           </div>
         </div>
