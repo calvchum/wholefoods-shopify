@@ -16,19 +16,6 @@ class ProductGrid extends Component {
       );
     });
 
-    if (this.props.search !== '') {
-      let searchedProducts = this.props.searchResults.map((product) => {
-      return (
-          <Product
-            client={this.props.client}
-            key={product.id.toString()}
-            product={product}
-            {...this.props}
-          />
-        );
-      });
-    }
-
     return (
       <div className="product-wrapper">
         <div className="left-side filters">
