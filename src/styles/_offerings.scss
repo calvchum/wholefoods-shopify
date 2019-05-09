@@ -1,0 +1,25 @@
+.offerings-list {
+  list-style: none;
+  text-align: center;
+  padding: 0px;
+  & .offerings-list-item a {
+    text-decoration: none !important;
+    color: black;
+    font-size: $sub-header;
+  }
+  & .offerings-list-item {
+    transition: all .1s ease-in;
+
+  }
+  & li:first-child {
+    margin-top: 100px;
+  }
+  & > * {
+    padding: 10px;
+  }
+  & .offerings-list-item:hover {
+    text-decoration: underline;
+    color: $navy;
+    transform: scale(1.01);
+  }
+}

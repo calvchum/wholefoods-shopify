@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class Location extends Component {
   render() {
     const data = this.props.location

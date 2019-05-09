@@ -18,6 +18,9 @@ class ProductGrid extends Component {
     return (
       <div className="product-wrapper">
         <div className="left-side filters">
+        <div className="filter-icon">
+          <img src={ require('../assets/burger-menu.svg') } alt="Burger menu"/>
+        </div>
         <ul>
           <li>Brand</li>
           <li>Diet</li>
@@ -28,10 +31,8 @@ class ProductGrid extends Component {
         </div>
         <div className="right-side">
           <p>Showing results for 'Search query'</p>
-          <div className="products">
-            <div className="product">  
-              {products}
-            </div>
+          <div className="product">  
+            {products}
           </div>
         </div>
       </div>
