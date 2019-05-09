@@ -36,6 +36,7 @@ class Landing extends Component {
           </div>
         </div>
         <div className="landing-instagram">
+        Instagram cards go here
         </div>
       </div>
     )

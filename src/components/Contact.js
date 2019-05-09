@@ -1,6 +1,6 @@
 import React from 'react';
 import * as Constants from '../Constants/locationInfo';
-import Location from './Location'
+import Location from './Location';
 
 const Contact = () => {
 
