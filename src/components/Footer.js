@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import Location from './Location';
-import * as Constants from '../Constants/locationInfo'
+import * as Constants from '../Constants/locationInfo';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+
+
 
 class Footer extends Component {
   render() {
@@ -16,16 +20,24 @@ class Footer extends Component {
     return (
       <div className="footer">
         <div className="footer-wrapper">
-          <div className="location-cards" >
+          <div className="landing-locations-wrapper">
             {locations}
           </div>
-          <div className="email-list">
-            <p>Join our mailing list to receive a once a month new products update</p>
-            <div className="email-input">
-              <input className="first-name" type="text" placeholder="First Name"/>
-              <input className="email" type="text" placeholder="Email"/>
-            </div>
-          </div>
+          <Form >
+            <Form.Group className="email-signup" controlId="formBasicEmail">
+              <Form.Label className="body-text">Email address</Form.Label>
+              <div className="email-submit-wrapper">
+                <Form.Control className="email-input" type="email" placeholder="Enter email" />
+                <Button className="email-submit-button" type="submit">
+                  Submit
+                </Button>
+                
+              </div>
+              <Form.Text className="body-text text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+          </Form>
         </div>
         <div className="copyright">
         <div className="copyright-text">

@@ -2,56 +2,45 @@
   background: $navy;
   color: $white;
   font-size: $body;
-  padding: 20px 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .footer-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  margin: 0 auto;
 }
-
 .location-cards {
   display: flex;
   flex: 1 1 70%;
   color: $white !important;
 }
-
-.email-list {
-  flex: 1 1 30%;
-  align-content: flex-end;
-    & p {
-    width: 100%;
-    max-width: 300px;
-  }
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.email-signup {
+  padding: 20px 20px 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
 }
 
 .email-input {
-    display: flex;
-    width: 240px;
-    & input {
-    padding: 12px 10px;
-    color: $navy;
-    border: none;
-    border-radius: 2px;
-      &:first-child {
-      margin-right: 1px;
-      width: 80px;
-    }
-      &:last-child {
-        width: 160px;
-      }
-      &:focus {
-        outline: none !important;
-        border: 1px solid $grey;
-    }
-  }
-
+  width: 280px;
 }
+.email-submit-button {
+  width: 60px;
+  background-color: $white;
+}
+.email-submit-wrapper {
+  display: flex;
+}
+
 
 
 .copyright {
@@ -59,21 +48,19 @@
   display: flex;
   flex-direction: column; 
   align-items: center;
-  // align-items: flex-start;
-  // justify-content: space-between !important;
-  max-width: 1000px;
+    & span:first-child {
+    padding-bottom: 10px;
+  }
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1152px) {
   .footer-wrapper {
     display: flex;
     flex-direction: column-reverse;
   }
-  .email-list {
-    width: calc(100%);
-    padding: 0 10px;
-    align-items: center;
-    display: flex;
+
+  .email-signup {
+    padding: 20px 20px 0px 20px;
   }
   .location-cards {
     width: 100%;
@@ -84,13 +71,6 @@
   }
   .footer {
     padding: 10px;
-  }
-  .copyright {
-    display: flex;
-    flex-direction: column;
-    & span:first-child {
-      padding-bottom: 10px;
-    }
   }
 }
 

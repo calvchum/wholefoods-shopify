@@ -45,27 +45,20 @@
 
 .landing-locations {
   display: flex;
-  padding: 0 30px;
+  padding: 20px 30px;
   flex-wrap: wrap;
-  // align-items: center;
-  // justify-content: center;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .landing-locations-wrapper > * {
   padding: 20px;
   border: 1px solid $navy;
-  // flex-shrink: 2;
-  // flex-grow: 2;
-  // flex-basis: 33%;
-  // width: 383px;
-  // height: 401px;
 }
 .landing-locations-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 8px;
-  padding: 20px;
+  // padding: 20px;
   flex-wrap: wrap;
   align-items: center;
 
@@ -77,8 +70,8 @@
     display: grid;
     grid-gap: 8px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    padding: 20px 0px;
+    grid-template-rows: auto;
+    // padding: 20px 0px;
   }
 
 }
@@ -86,7 +79,6 @@
 @media only screen and (max-width: 562px) {
   .landing-locations {
     padding: 0px 0px !important;
-
   }
 
   .landing-locations-wrapper {
@@ -94,7 +86,7 @@
     grid-gap: 8px;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    padding: 20px 0px;
+    // padding: 20px 0px;
     & .location-wrapper {
       width: 95vw;
     }
