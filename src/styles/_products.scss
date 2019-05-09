@@ -1,39 +1,55 @@
 .product-wrapper {
   display: flex;
-  justify-content: space-around;
   align-content: center;
 }
 .filter {
   flex: 0 0 30%;
 }
 .left-side {
-
+  flex-basis: 30%;
+  padding-left: 32px;
+  padding-top: 32px;
 }
 .right-side {
-  // flex: 0 0 70%;
 
 }
 .products {
-  // display: flex;
-  // justify-content: flex-start;
 }
 
 .product {
   display: grid;
-  // flex-flow: column wrap;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat( 3, minmax(227px, 1fr) );  
   grid-gap: 8px;
 }
 .product-display-image img {
   height: 217px;
   width: 227px;
 }
+.product-display-image {
+  max-height: 217px;
+  max-width: 227px;
+}
 
 .add-to-cart {
-
 }
+
+
+.search-results-copy {
+  padding-bottom: 4px;
+  border-bottom: 1px solid $navy;
+}
+
+// Styles related to the filters
 .filter-icon {
   display: none;
+}
+
+.filter-list-item {
+  list-style: none;
+  padding-left: 20px;
+  & li {
+    padding: 4px;
+  }
 }
 
 
@@ -42,21 +58,20 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
     flex-shrink: 2;
-
   }
   .product-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
     margin: 0 auto;
   }
-
   .product-display-image img{
     width: 100%;
   }
   .right-side {
     width: calc(100vw - 16px);
   }
-  .left-side ul {
+  .left-side {
     display: none;
   }
   .filter-icon {
