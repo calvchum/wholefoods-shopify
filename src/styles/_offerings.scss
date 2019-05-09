@@ -23,3 +23,9 @@
     transform: scale(1.01);
   }
 }
+
+@media(max-width: 768px) {
+  .offerings-list li:first-child {
+    margin-top: 50px;
+  }
+}
