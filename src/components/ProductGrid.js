@@ -35,7 +35,6 @@ class ProductGrid extends Component {
           <p>Showing results for 'Search query'</p>
           <div className="products">
             <div className="product">   
-            {allProducts}
           <p>{search !== '' ? `Showing results for '${search}'...` : 'Showing all products...'}</p>
               {search !== '' ? this.props.searchResults.map((product) => { return ( <Product client={this.props.client} key={product.id.toString()} product={product}/> )}) : allProducts}
             </div>
