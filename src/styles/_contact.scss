@@ -1,3 +1,44 @@
-.contact-cards {
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.contact-leftside {
+  flex: 0 0 40%;
+  display: flex;
+}
+
+.contact-locations {
+  display: flex;
+  
+}
+.contact-rightside {
+  display: flex;
+  flex: 0 0 40%;
+  flex-direction: column;
+}
+.contact-jobs-wrapper {
+
+}
+.contact-suppliers-wrapper {
+
+}
+
+.contact-location-cards {
   color: $navy;
+}
+.contact-locations-image img {
+  width: 217px;
+  height: 227px;
+}
+
+@media(max-width: 768px) {
+    .contact-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 20px;
+  }
+
+
 }

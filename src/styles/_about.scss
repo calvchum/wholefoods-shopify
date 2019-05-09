@@ -8,23 +8,26 @@
 }
 
 .about-right {
-  flex: 1 1 50%;
+  flex: 1 1 auto;
   padding-left: 50px;
 }
 
 @media only screen and (max-width: 900px) {
   .about-wrapper {
     flex-direction: column-reverse;
-    padding: 10px;
+    padding: 0px;
     align-items: center;
   }
-  .about-image {
-    width: calc(100% - 10px);
-    overflow: hidden;
-  }
+  // .about-image {
+  //   width: calc(100% - 10px);
+  //   overflow: hidden;
+  // }
   .about-right {
     padding-left: 0px;
     align-items: center;
+    & img {
+      width: 100%;
+    }
   }
   .about-left {
     padding: 20px;
