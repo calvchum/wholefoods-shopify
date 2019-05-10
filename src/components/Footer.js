@@ -5,9 +5,6 @@ import EmailSignup from './EmailSignup';
 import Copyright from './Copyright';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 
-
-
-
 class Footer extends Component {
   render() {
     let locations = Constants.locationData.map((location, i) => {
@@ -23,15 +20,18 @@ class Footer extends Component {
       <div className="footer-container">
         <Container>
           <Row>
+     {/* Displaying store locations  */}
             <Col className="footer-email-locations-wrapper" xs={{ span: 12, order: 12 }}  lg={{ span: 8, order: 1 }}>
               <div style={{display: 'flex'}}>
               {locations}
               </div>
             </Col>
+     {/* Displaying email signup */}
             <Col className="footer-email-locations-wrapper" xs={{ span: 12, order: 1 }}  lg={{ span: 4, order: 12 }}>
               <EmailSignup/>
             </Col>
           </Row>
+      {/* Displaying the copyright and designed by information  */}
           <Row xs="12" className="footer-copyright">
             <Copyright/>
           </Row>
