@@ -39,11 +39,22 @@ $header: 25px;
 
 .search-bar {
   width: 200px;
+  height: 40px;
   border-radius: 4px;
   box-shadow: none;
+  transition: 0.2s;
+  border-radius: 20px;
+  padding: 10px;
   &:focus {
-    outline: $navy;
+    outline: none;
+    border: 1px solid $navy;
   }
+}
+.showSearch {
+  display: block;
+}
+.noShowSearch {
+  display: none;
 }
 
 body {

@@ -6,7 +6,26 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+      this.handleClick = this.handleClick.bind(this);
+
+    this.state = {
+      clicked: true
+    }
+  }
+
+  handleClick(e) {
+    console.log("firing")
+    this.setState({
+      clicked: !this.state.clicked
+    });
+    console.log(this.state.clicked)
+  };
+
   render() {
+    let clickedStatus = this.state.clicked ? 'showSearch' : 'noShowSearch';
+
     return (
       <div className="header-wrapper">
       <Container className="header-container">
@@ -37,12 +56,6 @@ class Header extends Component {
               </Link>
             </div>
           </Col>
-        <Searchbar
-          products={this.props.products}
-          updateSearch={this.props.updateSearch}
-          updateSearchResults={this.props.updateSearchResults}
-          search={this.props.search}
-        />
       {/* Cart icon and shop button to navigate to products */}
           <Col xs="3" md={{span: 3}}>
             <div className="right-navigation">
@@ -51,9 +64,17 @@ class Header extends Component {
                 onClick={this.props.handleCartOpen} 
                 alt="Cart icon"
               />
-              <Link className="header-icons search-icon link" to="/">
-                <img src={ require('../assets/search-icon.svg') } alt="search icon"/>
-              </Link>
+              <div className="header-icons search-icon link">
+                <img onClick={this.handleClick} src={ require('../assets/search-icon.svg') } alt="search icon"/>
+                <div className={clickedStatus}>
+                  <Searchbar
+                    products={this.props.products}
+                    updateSearch={this.props.updateSearch}
+                    updateSearchResults={this.props.updateSearchResults}
+                    search={this.props.search}
+                  />
+                </div>
+              </div>
             </div> 
           </Col>
         </Row>
