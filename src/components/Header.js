@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import BurgerMenu from './BurgerMenu';
 
 class Header extends Component {
   render() {
@@ -7,20 +8,18 @@ class Header extends Component {
       <div className="header-wrapper">
   {/* Navigation buttons for desktop devices only */}
         <div className="left-navigation">
-          <div className="header-icons hamburger-menu link">
     {/* Burger menu for mobile devices only */}
-            <Link to="/">
-              <img src={ require('../assets/burger-menu.svg') } alt="Burger menu"/>
-            </Link>
+          <div className="header-hamburger-menu">
+            <BurgerMenu/>
           </div>
           <Link className='link link-text' to="/about">
-            <h4>About</h4>
+            <span>About</span>
           </Link>      
           <Link className='link link-text' to="/contact">
-            <h4>Contact</h4>
+            <span>Contact</span>
           </Link>
           <Link className='link link-text' to="/offerings">
-            <h4>Offerings</h4>
+            <span>Offerings</span>
           </Link>
         </div>
   {/* Logo display */}

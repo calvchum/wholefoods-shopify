@@ -6,8 +6,10 @@ $white: #F9F9F9;
 
 // Font Variables
 $body: 15px;
+$body-uppercase: 12px;
 $sub-header: 20px;
 $header: 25px;
+
 
 @import '_footer.scss';
 @import '_header.scss';
@@ -19,7 +21,8 @@ $header: 25px;
 @import '_about.scss';
 @import '_single.scss';
 @import '_offerings.scss';
-@import 'emailSignup.scss';
+@import '_emailSignup.scss';
+@import '_burgerMenu.scss';
 
 .header {
   font-size: $header;
@@ -33,6 +36,7 @@ $header: 25px;
   font-size: $body;
   font-weight: 400;
 }
+
 .search-bar {
   width: 200px;
   border-radius: 4px;

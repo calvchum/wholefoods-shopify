@@ -1,11 +1,9 @@
-
 .landing-bkg {
   background: linear-gradient(-225deg, rgba(1, 1, 1, 0.4) 40%, rgba(1, 1, 1, 0.4) 40%), url(https://res.cloudinary.com/davoctnex/image/upload/v1556608251/Organic%20Wholefoods%20Sample%20Images/Shop-front-imagery.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  // width: 100vw;
   height: 80vh;
   color: $white;
   justify-content: center;
@@ -30,19 +28,9 @@
   height: 66px;
 }
 
-.landing-locations-wrapper > * {
-  padding: 20px;
-  border: 1px solid $navy;
-}
-
 .landing-instagram {
   background: $grey;
   padding: 50px;
-}
-
-
-@media only screen and (max-width: 962px) {
-
 }
 
 @media only screen and (max-width: 562px) {
