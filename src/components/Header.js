@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Searchbar from './Searchbar';
 import BurgerMenu from './BurgerMenu';
-import Searchbar from './Searchbar';
 import { Container, Row, Col } from 'react-bootstrap';
 
 
