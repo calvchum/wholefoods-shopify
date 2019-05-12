@@ -70,7 +70,6 @@ class App extends Component {
 
   updateSearch(input) {
     this.setState({ search: input })
-    this.updateSearchResults()
   }
 
   updateQuantityInCart(lineItemId, quantity) {
@@ -153,6 +152,7 @@ class App extends Component {
             <Searchbar
               products={this.state.products}
               updateSearch={this.updateSearch}
+              updateSearchResults={this.updateSearchResults}
               search={this.state.search}
             />
             <Route exact path="/" component={Landing}/>

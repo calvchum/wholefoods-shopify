@@ -4,12 +4,8 @@ class Searchbar extends Component {
 	
   handleChange(e) {
     const search = e.target.value
-    const filteredItems = this.props.products.filter(
-      (product) => {
-        return product.title.toLowerCase().indexOf(this.props.search.toLowerCase()) !== -1;
-      }
-    );
     this.props.updateSearch(search);
+    this.props.updateSearchResults();
   }
 
   render() {    
