@@ -9,7 +9,7 @@ import Single from './Single';
 import Footer from './Footer';
 import Cart from './Cart';
 import About from './About';
-import Searchbar from './Searchbar';
+
 
 class App extends Component {
   constructor() {
@@ -70,7 +70,6 @@ class App extends Component {
 
   updateSearch(input) {
     this.setState({ search: input })
-    this.updateSearchResults()
   }
 
   updateQuantityInCart(lineItemId, quantity) {
@@ -149,10 +148,9 @@ class App extends Component {
           <div>
             <Header
               handleCartOpen={this.handleCartOpen}
-            />
-            <Searchbar
               products={this.state.products}
               updateSearch={this.updateSearch}
+              updateSearchResults={this.updateSearchResults}
               search={this.state.search}
             />
             <Route exact path="/" component={Landing}/>
