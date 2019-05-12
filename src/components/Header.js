@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Searchbar from './Searchbar';
 import BurgerMenu from './BurgerMenu';
 
 class Header extends Component {
@@ -28,6 +29,12 @@ class Header extends Component {
             <img src={ require('../assets/wholefoods-logo.svg') } alt="Wholefoods logo"/>
           </Link>
         </div>
+        <Searchbar
+          products={this.props.products}
+          updateSearch={this.props.updateSearch}
+          updateSearchResults={this.props.updateSearchResults}
+          search={this.props.search}
+        />
    {/* Cart icon and shop button to navigate to products */}
       <div className="right-navigation">
         <input className="header-icons" type="image" 
