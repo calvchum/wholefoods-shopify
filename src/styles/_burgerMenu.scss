@@ -1,16 +1,8 @@
-
-.menubar {
-  // height: 60px;
-  // text-align: center; 
-}
-
 // Hamburger Menu
 #hambmenu {
   position: relative;
   width: 40px;
   height: 40px;
-  float: left;
-  
   transition: .2s ease-in-out;
   cursor: pointer;
   & span {
@@ -18,24 +10,24 @@
     height: 3px;
     width: 100%;
     vertical-align: middle;
-    margin: 20px 0 0 15px;
-    background: white;
+    margin: 20px 0px 0px 15px;
+    background: $white;
     border-radius: 8px;
     opacity: 1;
     left: 0;
     background: $navy;
-    transform: rotate(0deg);;
-    transition: .2s ease-in-out;;
-    padding: 0px;;
+    transform: rotate(0deg);
+    transition: .2s ease-in-out;
+    padding: 0px;
   }
 }
 .hambclicker {
   content: '';
-  height: 48px;
-  width: 55px;
+  height: 80px;
+  width: 80px;
   position: absolute;
-  top: 40px;
-  left: 30px;
+  top: 0px;
+  left: 0px;
   cursor: pointer;
   z-index: 1;
 }
@@ -57,16 +49,16 @@
 
 // Slide in menu
 #menu {
-  z-index: 1;
   position: absolute;
-  left: 0px;
-  top: 122px;
+  z-index: 1;
+  left: -10px;
+  top: 83px;
   height: calc(100vh - 122px);
-  width: 100%;
+  width: 100vw;
   background-color: $white;
   opacity: 1;
   transform: translateX(-120%);
-  transition: transform 200ms;
+  transition: transform 300ms;
   & ul {
     margin-top: 0px;
     padding: 0px;

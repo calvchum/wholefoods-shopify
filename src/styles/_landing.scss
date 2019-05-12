@@ -5,16 +5,19 @@
   -o-background-size: cover;
   background-size: cover;
   height: 80vh;
+  width: 100vw;
   color: $white;
   justify-content: center;
   align-items: center;
   text-align: justify;
+  margin-right: 0px;
 }
 .landing-copy {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // padding: 0px;
 }
 
 .browse-button {
@@ -24,7 +27,7 @@
   border-radius: 2px;
   align-items: center;
   margin-bottom: 10px;
-  width: 342px;
+  width: 200px;
   height: 66px;
 }
 
@@ -35,7 +38,7 @@
 
 @media only screen and (max-width: 562px) {
   .body-text {
-    width: 95vw;
+    // width: 95vw;
   }
 }
 

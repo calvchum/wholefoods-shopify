@@ -18,10 +18,10 @@ class MenuLinks extends React.Component {
     }
   }
   render() {
-    let links = this.state.links.map((link, i) => <li ref={i + 1}><a href={link.link}>{link.text}</a></li>);
+    let links = this.state.links.map((link, i) => <li key={i} ref={i + 1}><a href={link.link}>{link.text}</a></li>);
 
     return (
-        <div className={this.props.menuStatus} id='menu'>
+        <div className={this.props.menuStatus} id="menu">
           <ul>
             { links }
           </ul>
@@ -49,7 +49,7 @@ class BurgerMenu extends React.Component {
     if (!this.refs.root.contains(e.target) && this.state.isOpen === true) {
       this.setState({
       isOpen: false
-    });
+      });
     };
   }
   _menuToggle(e) {
@@ -65,7 +65,9 @@ class BurgerMenu extends React.Component {
       <div ref="root">
         <div className="hambclicker" onClick={ this._menuToggle }></div>
         <div id="hambmenu" className={ menuStatus }><span></span><span></span><span></span></div>
-        <MenuLinks className="overflow" menuStatus={ menuStatus }/>
+        <div>
+        <MenuLinks menuStatus={ menuStatus }/>
+        </div>
       </div>
     )
   }

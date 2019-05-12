@@ -34,7 +34,7 @@ class Landing extends Component {
         </Row>    
         <Container>
           <Row>
-            <Col className="footer-email-locations-wrapper" xs={{ span: 12 }}  lg={{ span: 8 }}>
+            <Col className="footer-email-locations-wrapper">
               <div className="footer-locations">
               {locations}
               </div>
