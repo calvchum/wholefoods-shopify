@@ -18,11 +18,21 @@
   padding-top: 20px;
 }
 
+.footer-locations {
+  display: flex;
+}
+
 @media (max-width: 768px) {
   .copyright-designed-by {
   text-align: left;
   }
-
+  .footer-locations {
+    flex-direction: column;
+    > * {
+    padding: 20px 0px;
+    }
+  }
 }
+
 
 

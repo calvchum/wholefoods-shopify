@@ -22,16 +22,19 @@ class Footer extends Component {
     return (
       <div className="footer-container">
         <Container>
+    {/* Displaying the location cards */}
           <Row>
             <Col className="footer-email-locations-wrapper" xs={{ span: 12, order: 12 }}  lg={{ span: 8, order: 1 }}>
-              <div style={{display: 'flex'}}>
+              <div className="footer-locations">
               {locations}
               </div>
             </Col>
+    {/* Email signup form */}
             <Col className="footer-email-locations-wrapper" xs={{ span: 12, order: 1 }}  lg={{ span: 4, order: 12 }}>
               <EmailSignup/>
             </Col>
           </Row>
+    {/* Copyright and designed by copy */}
           <Row xs="12" className="footer-copyright">
             <Copyright/>
           </Row>

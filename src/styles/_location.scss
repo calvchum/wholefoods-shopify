@@ -1,25 +1,11 @@
-// .location-wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   width: 200px;
-//   max-width: 250px; 
-//   height: 170;
-//   padding-right: 10px;
-//   font-size: $body;
-// }
-// .location-details {
-//   margin-top: 0px;
-// }
-// .day-times {
-//   display: flex;
-//   justify-content: space-between;
-//   padding: 0px;
-//   margin: 0px;
-// }
-// .phone-number {
-//   padding: 10px 0px;
-// }
-
 .locations-opening-hours:nth-child(even) {
   text-align: right;
+}
+
+.location-phone-number {
+  padding-top: 16px;
+}
+
+.locations-opening-hours-wrapper {
+  max-width: 300px;
 }

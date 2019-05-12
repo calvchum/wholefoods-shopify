@@ -6,14 +6,20 @@ class Location extends Component {
   render() {
     const data = this.props.location
     return (
-      <Container>
+      <Container xs="12" md="6" lg="4">
+    {/* Location header and address */}
         <Row>
-          <h3>{data.location}</h3>
+          <Col>
+            <h3>{data.location}</h3>
+          </Col>
         </Row>
         <Row>
-          <p>{data.address}</p>
+          <Col>
+            <p>{data.address}</p>
+          </Col>
         </Row>
-        <Row className="locations-opening-hours">
+    {/* Opening days and times */}
+        <Row className="locations-opening-hours-wrapper">
           <Col className="locations-opening-hours" xs="6"><span>Mon - Fri</span></Col>
           <Col className="locations-opening-hours" xs="6"><span>{data.hoursMTF}</span></Col>
           <Col className="locations-opening-hours" xs="6"><span>Saturday</span></Col>
@@ -21,8 +27,9 @@ class Location extends Component {
           <Col className="locations-opening-hours" xs="6"><span>Sunday</span></Col>
           <Col className="locations-opening-hours" xs="6"><span>{data.hoursSun}</span></Col>
         </Row>
+    {/* Inline style for padding-top of PH number*/}
         <Row>
-          <Col xs="12"><span>{data.phone}</span></Col>
+          <Col xs="12" className="location-phone-number"><span>{data.phone}</span></Col>
         </Row>
       </Container>
     );
