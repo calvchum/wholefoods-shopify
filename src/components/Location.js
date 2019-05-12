@@ -1,33 +1,37 @@
 import React, { Component } from 'react';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+
 
 class Location extends Component {
   render() {
     const data = this.props.location
     return (
-      <div className="location-wrapper">
-        <div className="location-details">
-          <h3>{data.location}</h3>
-          <p>{data.address}</p>
-        </div>
-        <div className="open-times">
-          <div className="day-times">
-            <span>Mon - Fri</span>
-            <span>{data.hoursMTF}</span>
-          </div>
-          <div className="day-times">
-            <span>Saturday</span>
-            <span>{data.hoursSat}</span>
-          </div>
-          <div className="day-times">
-            <span>Sunday</span>
-            <span>{data.hoursSun}</span>
-          </div>
-
-          <div className="phone-number">
-            <span>{data.phone}</span>
-          </div>
-        </div>
-      </div>
+      <Container xs="12" md="6" lg="4">
+    {/* Location header and address */}
+        <Row>
+          <Col>
+            <h3>{data.location}</h3>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p>{data.address}</p>
+          </Col>
+        </Row>
+    {/* Opening days and times */}
+        <Row className="locations-opening-hours-wrapper">
+          <Col className="locations-opening-hours" xs="6"><span>Mon - Fri</span></Col>
+          <Col className="locations-opening-hours" xs="6"><span>{data.hoursMTF}</span></Col>
+          <Col className="locations-opening-hours" xs="6"><span>Saturday</span></Col>
+          <Col className="locations-opening-hours" xs="6"><span>{data.hoursSat}</span></Col>
+          <Col className="locations-opening-hours" xs="6"><span>Sunday</span></Col>
+          <Col className="locations-opening-hours" xs="6"><span>{data.hoursSun}</span></Col>
+        </Row>
+    {/* Inline style for padding-top of PH number*/}
+        <Row>
+          <Col xs="12" className="location-phone-number"><span>{data.phone}</span></Col>
+        </Row>
+      </Container>
     );
   };
 };

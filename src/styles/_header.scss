@@ -14,13 +14,13 @@
 .link {
   font-style: normal;
   font-weight: 400;
-  font-size: $body;
+  font-size: $body-uppercase;
   line-height: 26px;
   display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 1px;
-  // text-transform: uppercase;
+  text-transform: uppercase;
   text-decoration: none;
   color: $navy;
   padding: 8px;
@@ -43,21 +43,18 @@
   display: inline-block;
 }
 
-  .hamburger-menu {
+  .header-hamburger-menu {
     display: none;
   }  
-
-
-// MEDIA BREAK POINTS
-
 @media only screen and (max-width: 900px) {
-  .hamburger-menu {
-    display: inline-block;
+  .header-hamburger-menu {
+    display: block;
+    cursor: pointer;
   }
   .left-navigation .link-text {
     display: none;
   }
   .logo img {
-    width: 150px;
+    width: 200px;
   }
 }

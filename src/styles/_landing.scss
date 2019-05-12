@@ -1,36 +1,21 @@
-.landing-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 .landing-bkg {
-  background-size: cover;
   background: linear-gradient(-225deg, rgba(1, 1, 1, 0.4) 40%, rgba(1, 1, 1, 0.4) 40%), url(https://res.cloudinary.com/davoctnex/image/upload/v1556608251/Organic%20Wholefoods%20Sample%20Images/Shop-front-imagery.jpg) no-repeat center center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: calc(100vh - 166px);
-  width: 100vw;
-  display: flex;
-    align-items: center;
-    justify-content: center;
-  & .landing-copy {
-    justify-content: center;
-    align-items: center;
+  height: 80vh;
+  color: $white;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+.landing-copy {
     display: flex;
     flex-direction: column;
-    width: 90vw;
-    color: $white;
-    & .body-text {
-      line-height: 29px;
-      text-align: center;
-      max-width: 600px;
-      overflow: hidden;
-    }
-  }
+    justify-content: center;
+    align-items: center;
 }
-
 
 .browse-button {
   padding: 20px;
@@ -43,60 +28,14 @@
   height: 66px;
 }
 
-.landing-locations {
-  display: flex;
-  padding: 20px 30px;
-  flex-wrap: wrap;
-  margin: 0 auto;
-}
-
-.landing-locations-wrapper > * {
-  padding: 20px;
-  border: 1px solid $navy;
-}
-.landing-locations-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 8px;
-  // padding: 20px;
-  flex-wrap: wrap;
-  align-items: center;
-
-}
-
-
-@media only screen and (max-width: 962px) {
-    .landing-locations-wrapper {
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    // padding: 20px 0px;
-  }
-
+.landing-instagram {
+  background: $grey;
+  padding: 50px;
 }
 
 @media only screen and (max-width: 562px) {
-  .landing-locations {
-    padding: 0px 0px !important;
-  }
-
-  .landing-locations-wrapper {
-    display: grid;
-    grid-gap: 8px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    // padding: 20px 0px;
-    & .location-wrapper {
-      width: 95vw;
-    }
-  }
-  .landing-bkg {
-    height: 100vh;
-    & .body-text {
-      width: 95vw;
-      font-size: 12px;
-    }
+  .body-text {
+    width: 95vw;
   }
 }
 

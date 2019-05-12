@@ -1,0 +1,100 @@
+
+.menubar {
+  // height: 60px;
+  // text-align: center; 
+}
+
+// Hamburger Menu
+#hambmenu {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  float: left;
+  
+  transition: .2s ease-in-out;
+  cursor: pointer;
+  & span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    vertical-align: middle;
+    margin: 20px 0 0 15px;
+    background: white;
+    border-radius: 8px;
+    opacity: 1;
+    left: 0;
+    background: $navy;
+    transform: rotate(0deg);;
+    transition: .2s ease-in-out;;
+    padding: 0px;;
+  }
+}
+.hambclicker {
+  content: '';
+  height: 48px;
+  width: 55px;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  cursor: pointer;
+  z-index: 1;
+}
+#hambmenu span:nth-child(1) {
+  top: 0px;
+}
+#hambmenu span:nth-child(2) {
+  top: 10px;
+}
+#hambmenu span:nth-child(3) {
+  top: 20px;
+}
+#hambmenu.isopen span:nth-child(2) {
+  width: 80%;
+}
+#hambmenu.isopen span:nth-child(3) {
+  width: 40%;
+}
+
+// Slide in menu
+#menu {
+  z-index: 1;
+  position: absolute;
+  left: 0px;
+  top: 122px;
+  height: calc(100vh - 122px);
+  width: 100%;
+  background-color: $white;
+  opacity: 1;
+  transform: translateX(-120%);
+  transition: transform 200ms;
+  & ul {
+    margin-top: 0px;
+    padding: 0px;
+    color: black;
+    list-style-type: none;
+    text-align: left;
+  }
+  & li {
+    padding: 30px 0 20px 20px;
+    font-size: 1.5em;
+    border-bottom: 1px solid rgba(0,0,0,.14);
+  }
+  & li:last-child {
+    border-bottom: none;
+  }
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu.isopen {
+  transform: none;
+}
+
+@media screen and (max-width: 420px) {
+  .menubar span {
+    font-size: 1.2em;  
+  }
+}

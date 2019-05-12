@@ -1,0 +1,33 @@
+.email-signup-wrapper {
+  padding: 0px !important;
+  background-color: $navy;
+}
+.email-submit-wrapper {
+  display: flex;
+  height: 60px;
+}
+
+.email-input {
+  width: 280px;
+  height: 60px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color: $white;
+  border: 1px solid $navy;
+}
+.email-submit-button {
+  background-color: $white;
+  border: 1px solid $navy;
+  border-left: none;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+@media (max-width: 562px) {
+  .email-input {
+    width: 80%
+  }
+  .email-submit-button {
+    
+  }
+}
