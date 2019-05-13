@@ -23,6 +23,7 @@ $header: 25px;
 @import '_offerings.scss';
 @import '_emailSignup.scss';
 @import '_burgerMenu.scss';
+@import '_filterOptions.scss';
 
 .header {
   font-size: $header;
@@ -31,18 +32,24 @@ $header: 25px;
 .subheader {
   font-size: $sub-header;
 }
+.body-uppercase {
+  font-size: $body-uppercase;
+  text-transform: uppercase;
+  margin-bottom: 0px;
 
+}
 .body-text {
   font-size: $body;
   font-weight: 400;
 }
 
 .search-bar {
-  width: 200px;
+  width: 0px;
   height: 40px;
   border-radius: 4px;
   box-shadow: none;
   transition: 0.2s;
+  opacity: 0;
   border-radius: 20px;
   padding: 10px;
   &:focus {
@@ -50,14 +57,40 @@ $header: 25px;
     border: 1px solid $navy;
   }
 }
+
+.search-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .showSearch {
   display: block;
+  width: 200px;
+  transition: .2s;
+  opacity: 1;
 }
-.noShowSearch {
-  display: none;
-}
+
 
 body {
   margin: 0px;
   font-family: 'Fira Sans', sans-serif;
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 }

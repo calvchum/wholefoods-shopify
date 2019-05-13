@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button, Form } from 'react-bootstrap';
 
-
-
-
 class EmailSignup extends Component {
   render() {
     return (
@@ -34,8 +31,6 @@ class EmailSignup extends Component {
           </Form.Group>
         </Form>
       </Container>
-
-
     )  
   }
 }

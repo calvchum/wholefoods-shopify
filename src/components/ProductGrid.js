@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import Product from './Product';
+import { Container, Row, Col } from 'react-bootstrap';
+import FilterOptions from './FilterOptions';
 
 class ProductGrid extends Component {
   render() {
     const {search} = this.props
-
     let allProducts = this.props.products.map((product) => {
       return (
         <Product
@@ -16,41 +17,21 @@ class ProductGrid extends Component {
       );
     });
 
+
     return (
-      <div className="container">
 
-        <div className="product-wrapper">
-          <div className="left-side filters">
-            <div className="filter-icon">
-              <img src={ require('../assets/burger-menu.svg') } alt="Burger menu"/>
-            </div>
-            <div className="filter-options-wrapper">
-              <p className="subheader">Brand</p>
-              <ul className="filter-list-item body-text">
-                <li>Brand</li>
-                <li>Diet</li>
-                <li>Category</li>
-                <li>Specials</li>
-                <li>Bulk Buys</li>
-              </ul>   
-              <p className="subheader">Category</p>
-              <ul className="filter-list-item body-text">
-                <li>Brand</li>
-                <li>Diet</li>
-                <li>Category</li>
-                <li>Specials</li>
-                <li>Bulk Buys</li>
-              </ul>
-            </div>
+      <div>
+        
+          <Row>
+            <Col xs="12" md="12" lg={{ span: 9, offset: 3 }}>
+              <p className="search-results-copy subheader">{search !== '' ? `Showing results for '${search}'...` : 'Showing all products...'}</p>          
+              <div className="product">{search !== '' ? this.props.searchResults.map((product) => { return ( <Product client={this.props.client} key={product.id.toString()} product={product}/> )}) : allProducts}
+              </div>
+            </Col>
+          </Row>
+          <div className="filter-setup"> 
+            <FilterOptions/>         
           </div>
-
-          <div className="right-side">
-            <p className="search-results-copy subheader">{search !== '' ? `Showing results for '${search}'...` : 'Showing all products...'}</p>          
-            <div className="product">
-                  {search !== '' ? this.props.searchResults.map((product) => { return ( <Product client={this.props.client} key={product.id.toString()} product={product}/> )}) : allProducts}
-            </div>
-          </div>
-        </div>
       </div>
     );
   }

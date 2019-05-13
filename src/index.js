@@ -1,10 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import './styles/style.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';
 import Client from 'shopify-buy';
-import './styles/style.scss'
+import App from './components/App';
+
 
 const client = Client.buildClient({
   storefrontAccessToken: 'c0c4eb77234691b728e0355ec50326f4',
@@ -20,3 +21,4 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
