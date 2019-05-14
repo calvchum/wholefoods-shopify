@@ -1,0 +1,31 @@
+.search-wrapper {
+  display: flex;
+} 
+.search-icon-wrapper {
+  align-items: center;
+  display: flex;
+}
+.noShowSearch.search-bar {
+  transition: opacity .3s;
+  transition: width .5s;
+  width: 0px;
+  opacity: 0;
+}
+.showSearch.search-bar {
+  transition: opacity .3s;
+  transition: width .5s;
+  width: 250px;
+  opacity: 1;
+  display: inline-block;
+  & :focus {
+    outline-color: $grey;
+  }
+  & input {
+  width: 250px;
+  height: 40px;
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 10px;
+  margin-left: 5px;
+  }
+}

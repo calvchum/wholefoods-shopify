@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import Searchbar from './Searchbar';
 import BurgerMenu from './BurgerMenu';
 import { Container, Row, Col } from 'react-bootstrap';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-
 
 class Header extends Component {
   render() {
@@ -49,17 +47,13 @@ class Header extends Component {
                 />
                 <div >
                   <div className="header-icons">
-                    <ReactCSSTransitionGroup
-                      transitionName="example"
-                      transitionEnterTimeout={500}
-                      transitionLeaveTimeout={300}>
+
                         <Searchbar
                           products={this.props.products}
                           updateSearch={this.props.updateSearch}
                           updateSearchResults={this.props.updateSearchResults}
                           search={this.props.search}
                         />
-                    </ReactCSSTransitionGroup>
                   </div>
                 </div>
               </div>

@@ -25,26 +25,24 @@ class Searchbar extends Component {
   }
 
   render() {  
-    let clickedStatus = this.state.clicked ? 'showSearch' : '';
+    let clickedStatus = this.state.clicked ? 'showSearch' : 'noShowSearch';
+    console.log(clickedStatus);
 
 		return (
-      <ReactCSSTransitionGroup
-      transitionName="example"
-      transitionEnterTimeout={500}
-      transitionLeaveTimeout={300}>
-      <div onClick={(e) => {this.handleClick(e)}} className='search-icon-wrapper'>
-        <a href='#'>
-          <img src={ require("../assets/search-icon.svg") } alt=""/>
-        </a>
-        <input
-          className="search-bar"
-          placeholder='Search..'
-          defaultValue=''
-          onKeyUp={(e) => {this.handleChange(e)}}
-        />
+      <div className="search-wrapper">
+        <div onClick={(e) => {this.handleClick(e)}} className='search-icon-wrapper'>
+          <a href='#'>
+            <img src={ require("../assets/search-icon.svg") } alt=""/>
+          </a>
+        </div>
+        <div className={`search-bar ${clickedStatus}`}>
+          <input
+            placeholder='Search..'
+            defaultValue=''
+            onKeyUp={(e) => {this.handleChange(e)}}
+          />
+        </div>
       </div>
-      </ReactCSSTransitionGroup>
-
 		)
 	}
 }
