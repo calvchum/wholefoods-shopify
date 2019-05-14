@@ -1,0 +1,28 @@
+#filter {
+  z-index: 1;
+  height: calc(100vh - 122px);
+  background-color: $white;
+  opacity: 1;
+  transform: translateY(220%);
+  transition: transform 300ms;
+}
+
+#filter.isopen {
+  transform: none;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+}
+.filter-setup {
+  position: absolute;
+  top: 130px;
+  right: 20px;
+}
+
+@media(max-width: 768px) {
+  .filter-icon {
+    display: block;
+    text-align: right;
+    padding: 10px;
+  }
+}

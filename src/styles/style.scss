@@ -23,6 +23,8 @@ $header: 25px;
 @import '_offerings.scss';
 @import '_emailSignup.scss';
 @import '_burgerMenu.scss';
+@import '_filterOptions.scss';
+@import '_searchBar.scss';
 
 .header {
   font-size: $header;
@@ -31,22 +33,20 @@ $header: 25px;
 .subheader {
   font-size: $sub-header;
 }
+.body-uppercase {
+  font-size: $body-uppercase;
+  text-transform: uppercase;
+  margin-bottom: 0px;
 
+}
 .body-text {
   font-size: $body;
   font-weight: 400;
-}
-
-.search-bar {
-  width: 200px;
-  border-radius: 4px;
-  box-shadow: none;
-  &:focus {
-    outline: $navy;
-  }
 }
 
 body {
   margin: 0px;
   font-family: 'Fira Sans', sans-serif;
 }
+
+

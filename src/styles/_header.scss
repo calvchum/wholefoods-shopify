@@ -48,7 +48,9 @@
 .header-hamburger-menu {
   display: none;
 } 
-
+.searchbar-transition {
+  display: none;
+}
 
 // Tablets and smaller see hamburger menu 
 @media only screen and (max-width: 768px) {
