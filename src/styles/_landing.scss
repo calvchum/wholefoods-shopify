@@ -40,7 +40,7 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  display: flex;
+  // display: flex;
   align-items: center;
   padding: 32px;
   width: 33.333%;
@@ -67,6 +67,12 @@
   opacity: 1;
 }
 
+@media only screen and (max-width: 768px) {
+  .landing-location-wrapper {
+    display: flex;
+    flex-direction: column;
 
+  }
+}
 
 
