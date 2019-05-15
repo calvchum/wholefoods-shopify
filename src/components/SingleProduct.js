@@ -34,6 +34,7 @@ class SingleProduct extends Component {
   }
 
   render(){
+    console.log(this.props.product)
     //ES6 destructuring 
     const { title, images, options } = this.props.product
     // defining te variant variables

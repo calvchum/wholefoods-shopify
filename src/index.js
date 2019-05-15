@@ -8,8 +8,8 @@ import App from './components/App';
 
 
 const client = Client.buildClient({
-  storefrontAccessToken: 'c0c4eb77234691b728e0355ec50326f4',
-  domain: 'organic-wholefoods-melbourne.myshopify.com'
+  storefrontAccessToken: 'cee38e88108f0288d93d539b61876095',
+  domain: 'second-og-wholefoods.myshopify.com'
 });
 
 ReactDOM.render(
