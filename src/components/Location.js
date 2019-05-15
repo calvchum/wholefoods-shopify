@@ -9,17 +9,17 @@ class Location extends Component {
       <Container xs="12" md="6" lg="4">
     {/* Location header and address */}
         <Row>
-          <Col>
+          <Col className="body-text">
             <h3>{data.location}</h3>
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col className="body-text">
             <p>{data.address}</p>
           </Col>
         </Row>
     {/* Opening days and times */}
-        <Row className="locations-opening-hours-wrapper">
+        <Row className="body-text locations-opening-hours-wrapper">
           <Col className="locations-opening-hours" xs="6"><span>Mon - Fri</span></Col>
           <Col className="locations-opening-hours" xs="6"><span>{data.hoursMTF}</span></Col>
           <Col className="locations-opening-hours" xs="6"><span>Saturday</span></Col>
