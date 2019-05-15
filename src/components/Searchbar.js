@@ -28,7 +28,7 @@ class Searchbar extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.submitSearch();
+    this.props.history.push('/products/');
   }
 
   render() {  
