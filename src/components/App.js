@@ -28,6 +28,7 @@ class App extends Component {
     this.handleCartClose = this.handleCartClose.bind(this);
     this.handleCartOpen = this.handleCartOpen.bind(this);
     this.addVariantToCart = this.addVariantToCart.bind(this);
+    this.submitSearch = this.submitSearch.bind(this);
     this.updateQuantityInCart = this.updateQuantityInCart.bind(this);
     this.removeLineItemInCart = this.removeLineItemInCart.bind(this);
     this.updateSearch = this.updateSearch.bind(this);
@@ -52,6 +53,11 @@ class App extends Component {
         shop: res,
       });
     });
+  }
+
+  submitSearch() {
+    console.log(this.state.searchResults)
+
   }
 
   handleCartClose() {
@@ -152,6 +158,7 @@ class App extends Component {
               products={this.state.products}
               updateSearch={this.updateSearch}
               updateSearchResults={this.updateSearchResults}
+              submitSearch={this.submitSearch}
               search={this.state.search}
             />
             <Route exact path="/" component={Landing}/>

@@ -50,6 +50,7 @@ class Header extends Component {
                       products={this.props.products}
                       updateSearch={this.props.updateSearch}
                       updateSearchResults={this.props.updateSearchResults}
+                      submitSearch={this.props.submitSearch}
                       search={this.props.search}
                     />
                 </div>
