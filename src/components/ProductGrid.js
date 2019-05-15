@@ -23,7 +23,7 @@ class ProductGrid extends Component {
           <Col xs="12" md="4" lg="3">
               <FilterOptions/>         
           </Col>
-          <Col xs="12" md="8" lg="9">
+          <Col className="product-gird-wrapper" xs="12" md="8" lg="9">
             <p className="search-results-copy subheader">{search !== '' ? `Showing results for '${search}'...` : 'Showing all products...'}</p>          
             <div className="product">{search !== '' ? this.props.searchResults.map((product) => { return ( <Product client={this.props.client} key={product.id.toString()} product={product}/> )}) : allProducts}
             </div>
