@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import VariantSelector from './VariantSelector'
+import VariantSelector from './VariantSelector';
+import { Container, Row, Col } from 'react-bootstrap';
+
 
 class SingleProduct extends Component {
   constructor(props) {
@@ -34,7 +36,6 @@ class SingleProduct extends Component {
   }
 
   render(){
-    console.log(this.props.product)
     //ES6 destructuring 
     const { title, images, options } = this.props.product
     // defining te variant variables
@@ -60,9 +61,9 @@ class SingleProduct extends Component {
     })
 
     return (
-      <div className="single-wrapper">
-        <div className="single-leftside">
-          <div>
+      <Container>
+        <Row className="single-wrapper">
+          <Col className='product-selections-wrapper' xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }}>
             <h1 className="subheader">
               {title}
             </h1>
@@ -80,19 +81,18 @@ class SingleProduct extends Component {
               </span>
             </span>
 
-
             <div className="add-to-cart-wrapper">
               <span className="single-quantity body-text">
               {quantityField}
               </span>
               {addToCartButton}
             </div> 
-          </div> 
-        </div>
-        <div className="single-rightside">
-          <img src={images[0].src} height="300px" alt=""/>
-        </div>
-      </div>
+          </Col>
+          <Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 2 }}>
+            <img src={images[0].src} height="100%" width="100%" alt=""/>
+          </Col>
+        </Row>
+      </Container>
     )
   }
 };
