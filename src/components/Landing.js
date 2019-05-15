@@ -8,10 +8,14 @@ class Landing extends Component {
   render() {
     let locations = Constants.locationData.map((location, i) => {
       return (
-        <Location
-          key={i}
-          location={location}
-        />
+        <div className="landing-location-bkg">
+          <div className="location-opacity">
+            <Location
+              key={i}
+              location={location}
+            />
+          </div>
+        </div>
       );
     });
 
@@ -33,21 +37,20 @@ class Landing extends Component {
           </Col>
         </Row>    
         <Container>
+      {/* Locations cards */}
           <Row>
-            <Col className="footer-email-locations-wrapper">
-              <div className="footer-locations">
+            <Col className='landing-locations-wrapper'>
               {locations}
-              </div>
             </Col>
           </Row>
-      {/* Instagram cards */}
+      {/* Instagram cards go here
           <Row>
             <Col>
               <div className="landing-instagram">
               Instagram cards go here
               </div> 
             </Col>
-          </Row>
+          </Row>*/}
         </Container>
       </div>
     )
