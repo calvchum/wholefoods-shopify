@@ -23,6 +23,7 @@
   top: 48px;
   right: 20px;
 }
+
 .link {
   font-style: normal;
   font-weight: 400;
@@ -41,19 +42,14 @@
   }
 }
 .header-icons img, input {
-  height: 25px;
-  width: 25px; 
+  height: 26px;
+  width: 26px; 
   display: inline-block;
+  margin: 7px;
 }
-.header-hamburger-menu {
+.header-hamburger-menu, .searchbar-transition, .display-none{
   display: none;
 } 
-.searchbar-transition {
-  display: none;
-}
-.display-none {
-  display: none;
-}
 
 // Tablets and smaller see hamburger menu 
 @media only screen and (max-width: 768px) {
