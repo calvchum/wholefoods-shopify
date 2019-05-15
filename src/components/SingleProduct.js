@@ -38,12 +38,15 @@ class SingleProduct extends Component {
   render(){
     //ES6 destructuring 
     const { title, images, options } = this.props.product
+    
     // defining te variant variables
     let variantImage = this.state.selectedVariantImage || this.props.product.images[0]
     let variant = this.state.selectedVariant || this.props.product.variants[0]
     let variantQuantity = this.state.selectedVariantQuantity || 1
+    
     // the Add To Cart button is coded here 
     const addToCartButton = <button className="body-text" onClick={ () => this.props.addVariantToCart(variant.id, variantQuantity)} >Add To Cart</button>
+    
     // the quantity field is coded here
     const quantityField = <label> 
       <input className="body-text" min="1" type="number" defaultValue={variantQuantity} onChange={this.handleQuantityChange}></input>
@@ -62,6 +65,7 @@ class SingleProduct extends Component {
 
     return (
       <Container>
+    {/* Price, qty, description */}
         <Row className="single-wrapper">
           <Col className='product-selections-wrapper' xs={{ span: 12, order: 2 }} md={{ span: 6, order: 1 }}>
             <h1 className="subheader">
@@ -73,14 +77,12 @@ class SingleProduct extends Component {
             <h3 className="body-text single-description">
               {this.props.product.description || 'A fine fine fiiine product'}
             </h3>
-
+    {/* Variant selectors */}
             <span className="single-variant-selectors body-text">
               <span>
                 {variantSelectors}
-                {/*<img src={ require('../assets/down-arrow.png') } alt="down arrow" />*/}
               </span>
             </span>
-
             <div className="add-to-cart-wrapper">
               <span className="single-quantity body-text">
               {quantityField}
@@ -88,6 +90,7 @@ class SingleProduct extends Component {
               {addToCartButton}
             </div> 
           </Col>
+    {/* Product image display */}
           <Col xs={{ span: 12, order: 1 }} md={{ span: 6, order: 2 }}>
             <img src={images[0].src} height="100%" width="100%" alt=""/>
           </Col>
