@@ -7,7 +7,7 @@ class Searchbar extends Component {
       this.handleClick = this.handleClick.bind(this);
 
     this.state = {
-      clicked: true
+      clicked: false
     }
   }
 
@@ -15,7 +15,6 @@ class Searchbar extends Component {
     this.setState({
       clicked: !this.state.clicked
     });
-    console.log(e);
   };
 
   handleChange(e) {
@@ -26,7 +25,6 @@ class Searchbar extends Component {
 
   render() {  
     let clickedStatus = this.state.clicked ? 'showSearch' : 'noShowSearch';
-    console.log(clickedStatus);
 
 		return (
       <div className="search-wrapper">
@@ -37,6 +35,7 @@ class Searchbar extends Component {
         </div>
         <div className={`search-bar ${clickedStatus}`}>
           <input
+            clicked={clickedStatus}
             placeholder='Search..'
             defaultValue=''
             onKeyUp={(e) => {this.handleChange(e)}}
