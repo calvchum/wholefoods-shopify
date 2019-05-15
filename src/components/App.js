@@ -143,17 +143,24 @@ class App extends Component {
     )
   }
 
+  const renderHeader = (props) => {
+    return (
+      <Header
+        handleCartOpen={this.handleCartOpen}
+        products={this.state.products}
+        updateSearch={this.updateSearch}
+        updateSearchResults={this.updateSearchResults}
+        search={this.state.search}        
+        {...props}
+      />
+    )
+  }
+
     return (
       <div className="">
         <BrowserRouter>
           <div>
-            <Header
-              handleCartOpen={this.handleCartOpen}
-              products={this.state.products}
-              updateSearch={this.updateSearch}
-              updateSearchResults={this.updateSearchResults}
-              search={this.state.search}
-            />
+            <Route path="/" render={renderHeader}/>
             <Route exact path="/" component={Landing}/>
             <Route path="/products" render={renderProductGrid}/>
             <Route exact path="/about" component={About}/>
