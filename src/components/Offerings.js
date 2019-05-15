@@ -11,7 +11,6 @@ class Offerings extends React.Component {
   }
 
   handleMouseHover(offering) {
-    console.log(offering.src)
     this.setState({
       displayImage: offering.src
     })
