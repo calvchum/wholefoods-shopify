@@ -17,21 +17,18 @@ class ProductGrid extends Component {
       );
     });
 
-
     return (
-
       <div>
-        
-          <Row>
-            <Col xs="12" md="12" lg={{ span: 9, offset: 3 }}>
-              <p className="search-results-copy subheader">{search !== '' ? `Showing results for '${search}'...` : 'Showing all products...'}</p>          
-              <div className="product">{search !== '' ? this.props.searchResults.map((product) => { return ( <Product client={this.props.client} key={product.id.toString()} product={product}/> )}) : allProducts}
-              </div>
-            </Col>
-          </Row>
-          <div className="filter-setup"> 
-            <FilterOptions/>         
-          </div>
+        <Row>
+          <Col xs="12" md="4" lg="3">
+              <FilterOptions/>         
+          </Col>
+          <Col xs="12" md="8" lg="9">
+            <p className="search-results-copy subheader">{search !== '' ? `Showing results for '${search}'...` : 'Showing all products...'}</p>          
+            <div className="product">{search !== '' ? this.props.searchResults.map((product) => { return ( <Product client={this.props.client} key={product.id.toString()} product={product}/> )}) : allProducts}
+            </div>
+          </Col>
+        </Row>
       </div>
     );
   }

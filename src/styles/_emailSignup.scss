@@ -4,23 +4,26 @@
 }
 .email-submit-wrapper {
   display: flex;
+  & input {
+
   height: 60px;
+  }
 }
 
 .email-input {
   width: 280px;
   height: 60px;
-  border-bottom-right-radius: 0px;
-  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
   background-color: $white;
-  border: 1px solid $navy;
+  border: 1px solid $white !important;
 }
 .email-submit-button {
-  background-color: $white;
-  border: 1px solid $navy;
+  border: 1px solid $grey !important;
+  background: $grey !important;
   border-left: none;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
 }
 
 @media (max-width: 562px) {

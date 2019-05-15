@@ -6,6 +6,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 class Header extends Component {
   render() {
+    let openStatus = this.props.clicked;
+    console.log(this.props.clicked, openStatus)
 
     return (
       <div className="header-wrapper">
@@ -40,20 +42,20 @@ class Header extends Component {
         {/* Cart icon and shop button to navigate to products */}
             <Col xs="3" md={{span: 3}}>
               <div className="right-navigation">
-                <input className="header-icons" type="image" 
+                <input className={`header-icons ${openStatus}`} type="image" 
                   src={require('../assets/cart-icon.svg') } 
                   onClick={this.props.handleCartOpen} 
                   alt="Cart icon"
                 />
                 <div >
                   <div className="header-icons">
-
-                        <Searchbar
-                          products={this.props.products}
-                          updateSearch={this.props.updateSearch}
-                          updateSearchResults={this.props.updateSearchResults}
-                          search={this.props.search}
-                        />
+                      <Searchbar
+                        clicked={this.props.clicked}
+                        products={this.props.products}
+                        updateSearch={this.props.updateSearch}
+                        updateSearchResults={this.props.updateSearchResults}
+                        search={this.props.search}
+                      />
                   </div>
                 </div>
               </div>
