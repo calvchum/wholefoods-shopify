@@ -9,13 +9,12 @@
   }
   & .offerings-list-item {
     transition: all .1s ease-in;
-
   }
   & li:first-child {
     margin-top: 100px;
   }
   & > * {
-    padding: 10px;
+    padding: 8px;
   }
   & .offerings-list-item:hover {
     text-decoration: underline;
@@ -23,9 +22,21 @@
     transform: scale(1.01);
   }
 }
+.offerings-image {
+  width: 100%;
+  height: calc(100vh - 220px);
+}
+.offerings-wrapper {
+  padding: 40px;
+}
 
 @media(max-width: 768px) {
   .offerings-list li:first-child {
-    margin-top: 50px;
+    margin-top: 40px;
+  }
+  .offerings-image {
+    padding: 20px 0px;
+    width: 100%;
+    height: 50vh;
   }
 }
