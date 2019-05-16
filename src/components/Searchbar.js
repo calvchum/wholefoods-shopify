@@ -16,6 +16,7 @@ class Searchbar extends Component {
       clicked: !this.state.clicked
     });
     this.focus.focus();
+    e.preventDefault();
   };
 
   handleChange(e) {
