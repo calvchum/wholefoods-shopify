@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Searchbar extends Component {
@@ -35,7 +36,7 @@ class Searchbar extends Component {
   render() {  
     let clickedStatus = this.state.clicked ? 'showSearch' : 'noShowSearch';
 
-		return (
+    return (
       <div className="search-wrapper">
         <div onClick={(e) => {this.handleClick(e)}} className='search-icon-wrapper'>
           <a href='#'>
@@ -55,8 +56,8 @@ class Searchbar extends Component {
         </form>
         </div>
       </div>
-		)
-	}
+    )
+  }
 }
 
 export default Searchbar;
