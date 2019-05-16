@@ -15,6 +15,7 @@ class Searchbar extends Component {
     this.setState({
       clicked: !this.state.clicked
     });
+    this.focus.focus();
   };
 
   handleChange(e) {
@@ -35,6 +36,7 @@ class Searchbar extends Component {
         </div>
         <div className={`search-bar ${clickedStatus}`}>
           <input
+            ref={(focus) => { this.focus = focus; }} 
             clicked={clickedStatus}
             placeholder='Search..'
             defaultValue=''
