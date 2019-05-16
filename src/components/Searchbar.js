@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Searchbar extends Component {
   constructor(props) {
     super(props);
-      this.handleClick = this.handleClick.bind(this);
+
+    this.handleClick = this.handleClick.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
 
     this.state = {
       clicked: false
@@ -25,6 +28,11 @@ class Searchbar extends Component {
     this.props.updateSearchResults();
   }
 
+  handleSubmit(e) {
+    e.preventDefault();
+    this.props.history.push('/products/');
+  }
+
   render() {  
     let clickedStatus = this.state.clicked ? 'showSearch' : 'noShowSearch';
 
@@ -36,13 +44,16 @@ class Searchbar extends Component {
           </a>
         </div>
         <div className={`search-bar ${clickedStatus}`}>
+        <form action="" onSubmit={(e) => {this.handleSubmit(e)}}>
           <input
-            ref={(focus) => { this.focus = focus; }} 
+            ref={(focus) => { this.focus = focus; }} =
+            type="text"
             clicked={clickedStatus}
             placeholder='Search..'
             defaultValue=''
-            onKeyUp={(e) => {this.handleChange(e)}}
+            onKeyUp={(e) => {this.handleChange(e)}}            
           />
+        </form>
         </div>
       </div>
 		)
