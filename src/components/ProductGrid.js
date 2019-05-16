@@ -24,6 +24,7 @@ class ProductGrid extends Component {
               <FilterOptions/>         
           </Col>
           <Col className=" product-gird-wrapper" xs="12" md="8" lg="9">
+            <div> this is where a search bar will go </div>
             <p className="search-results-copy subheader">{search !== '' ? `Showing results for '${search}'...` : 'Showing all products...'}</p>          
             <div className="product">{search !== '' ? this.props.searchResults.map((product) => { return ( <Product client={this.props.client} key={product.id.toString()} product={product}/> )}) : allProducts}
             </div>
