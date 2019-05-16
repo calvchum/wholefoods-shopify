@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 class Searchbar extends Component {

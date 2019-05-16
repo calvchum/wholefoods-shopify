@@ -125,6 +125,8 @@ class App extends Component {
       <ProductGrid
         products={this.state.products}
         searchResults={this.state.searchResults}
+        updateSearch={this.updateSearch}
+        updateSearchResults={this.updateSearchResults}
         search={this.state.search}
         {...props}
       />

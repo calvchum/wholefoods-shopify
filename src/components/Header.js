@@ -47,7 +47,6 @@ class Header extends Component {
                   <div className="header-icons">
                     <Searchbar
                       {...this.props}
-                      clicked={this.props.clicked}
                       products={this.props.products}
                       updateSearch={this.props.updateSearch}
                       updateSearchResults={this.props.updateSearchResults}
