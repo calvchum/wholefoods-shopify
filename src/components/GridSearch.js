@@ -4,8 +4,6 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 class Searchbar extends Component {
   constructor(props) {
     super(props);
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
   handleChange(e) {
@@ -18,7 +16,7 @@ class Searchbar extends Component {
     return (
       <div className="search-wrapper">
         <div className={`search-bar`}>
-        <form action=""}>
+        <form action="">
           <input
             type="text"
             placeholder='Search..'
