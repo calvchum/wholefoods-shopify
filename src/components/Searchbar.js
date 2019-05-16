@@ -18,6 +18,8 @@ class Searchbar extends Component {
     this.setState({
       clicked: !this.state.clicked
     });
+    this.focus.focus();
+    e.preventDefault();
   };
 
   handleChange(e) {
@@ -44,6 +46,7 @@ class Searchbar extends Component {
         <div className={`search-bar ${clickedStatus}`}>
         <form action="" onSubmit={(e) => {this.handleSubmit(e)}}>
           <input
+            ref={(focus) => { this.focus = focus; }} =
             type="text"
             clicked={clickedStatus}
             placeholder='Search..'

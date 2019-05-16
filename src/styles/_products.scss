@@ -2,20 +2,44 @@
   display: grid;
   grid-template-columns: repeat( auto-fill, 227px );
   grid-gap: 8px;
+  padding-bottom: 20px;
+
 }
 .product-display-image img {
   height: 227px;
   width: 217px;
 }
+
 .search-results-copy {
   padding-bottom: 4px !important;
   border-bottom: 1px solid $navy;
   max-width: 95%;
 }
 .product-gird-wrapper {
-  padding: 0px;
+  // display: flex;
+  padding: 20px 0px 0px 0px;
+
+}
+// PRODUCT ROLLOVER
+.product-opacity {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+  transition: 0.2s;
+  background-color: $white;
+  padding: 10px;
+  border-radius: 2px;
+}
+.product-opacity:hover {
+  opacity: 0.8;
 }
 
+@media(max-width: 768px) {
+  .search-results-copy {
+    padding-left: 10px;
+  }
+}
 
 @media(max-width: 375px) {
   .product {
